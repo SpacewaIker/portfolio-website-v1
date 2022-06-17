@@ -1,0 +1,11 @@
+:root {
+    --accent-color1: #6128ff;
+    --accent-color2: #fff157;
+    --dark-accent: #290029;
+    --light-main: #fff3e0;
+    --dark-main: #202220;
+}
+
+body {
+    margin: 0;
+}
