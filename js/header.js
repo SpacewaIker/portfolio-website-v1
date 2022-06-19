@@ -7,7 +7,9 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <link rel="stylesheet" href="/css/header.css">
       <header>
-        <div id="header-bg"></div>
+        <svg id="header-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
+        </svg>
         <nav id="page-links">
           <a href="/index.html">menu() { Home();</a>
           <a href="/html/projects.html">Projects();</a>
@@ -28,3 +30,40 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+function updateHeaderSize() {
+  // scroll to this amount and the animation will be finished
+  var endScroll = $(window).height();
+
+  var poly = $('#header-poly');
+  var scrollTop = window.pageYOffset;
+  var scrollAmount = scrollTop < endScroll ? scrollTop : endScroll; 
+
+
+  if (window.matchMedia("(min-height: 850px)").matches) {
+    var minLeft = 50;
+    var minRight = 80;
+  } else {
+    var minLeft = 70;
+    var minRight = 100;
+  }
+
+  try {
+    var maxLeft = $('header-component')[0].attributes.getNamedItem('left-size').value;
+    var maxRight = $('header-component')[0].attributes.getNamedItem('right-size').value;
+  } catch (e) {
+    var maxLeft = 100;
+    var maxRight = 600;
+  }
+
+  // change polyline points
+  var left = maxLeft - (maxLeft - minLeft) * scrollAmount / endScroll;
+  var right = maxRight - (maxRight - minRight) * scrollAmount / endScroll;
+  poly.attr('points', `0 0, 1000 0, 1000 ${right}, 0 ${left}`);
+}
+
+window.addEventListener('scroll', updateHeaderSize);
+
+$(function () {
+  updateHeaderSize();
+});
