@@ -28,3 +28,33 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+function updateHeaderSize() {
+  // scroll to this amount and the animation will be finished
+  var endScroll = $(window).height();
+
+  var header = $('#header-bg');
+  var scrollTop = window.pageYOffset;
+  var scrollAmount = scrollTop < endScroll ? scrollTop : endScroll; 
+
+  var maxRotation = 20; // 20 deg
+  var minRotation = 1.5; // 1.5 deg
+
+  var minTop = -0.3 * $(window).height(); // 30 vh
+  // var maxTop = -0.74 * $(window).height(); // 74 vh
+  var maxTop = 70 -0.8 * $(window).height(); // 80 vh
+
+  // change header rotation
+  var headerRotation = maxRotation - (maxRotation - minRotation) * (scrollAmount / endScroll);
+  header.css('transform', 'rotate(' + headerRotation + 'deg)');
+
+  // change header position
+  var headerTop = minTop + (maxTop - minTop) * (scrollAmount / endScroll);
+  header.css('top', headerTop + 'px');
+}
+
+window.addEventListener('scroll', updateHeaderSize);
+
+$(function () {
+  updateHeaderSize();
+});
