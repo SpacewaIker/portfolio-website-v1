@@ -7,7 +7,9 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <link rel="stylesheet" href="/css/header.css">
       <header>
-        <div id="header-bg"></div>
+        <svg id="header-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
+        </svg>
         <nav id="page-links">
           <a href="/index.html">menu() { Home();</a>
           <a href="/html/projects.html">Projects();</a>
@@ -33,24 +35,31 @@ function updateHeaderSize() {
   // scroll to this amount and the animation will be finished
   var endScroll = $(window).height();
 
-  var header = $('#header-bg');
+  var poly = $('#header-poly');
   var scrollTop = window.pageYOffset;
   var scrollAmount = scrollTop < endScroll ? scrollTop : endScroll; 
 
-  var maxRotation = 20; // 20 deg
-  var minRotation = 1.5; // 1.5 deg
 
-  var minTop = -0.3 * $(window).height(); // 30 vh
-  // var maxTop = -0.74 * $(window).height(); // 74 vh
-  var maxTop = 70 -0.8 * $(window).height(); // 80 vh
+  if (window.matchMedia("(min-height: 850px)").matches) {
+    var minLeft = 50;
+    var minRight = 80;
+  } else {
+    var minLeft = 70;
+    var minRight = 100;
+  }
 
-  // change header rotation
-  var headerRotation = maxRotation - (maxRotation - minRotation) * (scrollAmount / endScroll);
-  header.css('transform', 'rotate(' + headerRotation + 'deg)');
+  try {
+    var maxLeft = $('header-component')[0].attributes.getNamedItem('left-size').value;
+    var maxRight = $('header-component')[0].attributes.getNamedItem('right-size').value;
+  } catch (e) {
+    var maxLeft = 100;
+    var maxRight = 600;
+  }
 
-  // change header position
-  var headerTop = minTop + (maxTop - minTop) * (scrollAmount / endScroll);
-  header.css('top', headerTop + 'px');
+  // change polyline points
+  var left = maxLeft - (maxLeft - minLeft) * scrollAmount / endScroll;
+  var right = maxRight - (maxRight - minRight) * scrollAmount / endScroll;
+  poly.attr('points', `0 0, 1000 0, 1000 ${right}, 0 ${left}`);
 }
 
 window.addEventListener('scroll', updateHeaderSize);
