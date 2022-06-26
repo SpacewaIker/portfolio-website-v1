@@ -8,20 +8,40 @@
   <title>Thibaut Baguette | Software Engineer</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
   <script src="/js/header.js"></script>
+  <script src="/js/scrollmagnet.js"></script>
+  <script src="/js/index.js"></script>
 </head>
 
 <body>
-  <header-component left-size="100" right-size="900"></header-component>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  home
+  <header-component left-size="100" right-size="850"></header-component>
+
+  <section id="title-screen" class="screen">
+    <div id="name-container">
+      <h2 id="greeting">Hello there. I'm</h2>
+      <h1 id="first-name">Thibaut</h1>
+      <h1 id="last-name">Baguette</h1>
+    </div>
+  </section>
+
+  <section id="separator-container">
+    <svg id="separator-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30,100 0,100 70,0 100"></polyline>
+    </svg>
+  </section>
+
+  <section id="intro-screen" class="screen">
+    <div id="picture-container">
+      <img id="picture" src="/img/profile_picture.jpg" alt="Picture of Thibaut Baguette">
+    </div>
+  </section>
+
   <div id="fill"></div>
 </body>
 

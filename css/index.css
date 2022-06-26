@@ -1,5 +1,104 @@
 #fill {
-    width: 100vw;
+    width: 100%;
     height: 400vh;
     background: linear-gradient(to bottom, var(--accent-color1), var(--accent-color2));
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+}
+
+#intro-screen {
+    background-color: var(--dark-main);
+    position: relative;
+    z-index: -1;
+}
+
+#greeting {
+    position: absolute;
+    color: var(--dark-accent);
+    font-family: 'Bree Serif', serif;
+    font-size: 3.5rem;
+    top: calc(-120px - 12vw);
+    left: 1vw;
+}
+
+#name-container {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+#name-container h1 {
+    position: absolute;
+    display: inline-block;
+    color: #290029;
+    bottom: 0;
+    font-size: 12.5vw;
+    margin: 0;
+    font-family: 'Raleway';
+    font-weight: 100;
+    mix-blend-mode: hard-light;
+}
+
+
+#name-container #first-name {
+    left: 0;
+}
+
+#name-container #last-name {
+    right: 0;
+}
+
+#separator-container {
+    width: 100%;
+    height: 200px;
+}
+
+#separator-svg {
+    width: 100%;
+    height: 145%;
+    fill: var(--accent-color1);
+}
+
+#picture-container {
+    position: absolute;
+    overflow: hidden;
+    left: -4vw;
+    top: 50px;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 0 35% 35% 0;
+    transform: rotate(15deg);
+}
+
+#picture {
+    height: 110%;
+    width: 110%;
+    transform: rotate(-15deg);
+}
+
+@media screen and (max-width: 768px) {
+    #name-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #name-container h1 {
+        font-size: 23vw;
+    }
+
+    #name-container #first-name {
+        bottom: 20vw;
+        left: auto;
+        right: auto;
+    }
+
+    #name-container #last-name {
+        left: auto;
+        right: auto;
+    }
+
 }
