@@ -4,8 +4,7 @@ header {
     font-family: 'Fira Code', monospace;
     font-size: 1.2rem;
     text-align: center;
-    overflow: hidden;
-    height: 100vh;
+    height: 0;
     width: 100%;
     z-index: 2;
 }
@@ -16,6 +15,7 @@ header #header-svg {
     z-index: -1;
     height: 100vh;
     width: 100%;
+    pointer-events: none;
 }
 header #header-poly {
     fill: var(--accent-color1);
