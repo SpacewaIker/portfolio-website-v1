@@ -9,4 +9,6 @@
 body {
     margin: 0;
     background: var(--light-main);
+    position: relative;
+    z-index: -5;
 }
