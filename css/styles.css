@@ -12,3 +12,17 @@ body {
     position: relative;
     z-index: -5;
 }
+
+.header {
+    position: relative;
+    font-size: 3rem;
+    font-family: 'Bahnschrift', sans-serif;
+    left: 5vw;
+}
+
+.paragraph {
+    position: relative;
+    font-size: 1.75rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}

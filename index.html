@@ -10,11 +10,14 @@
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
   <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
   <script src="/js/scrollmagnet.js"></script>
   <script src="/js/index.js"></script>
 </head>
@@ -40,9 +43,36 @@
     <div id="picture-container">
       <img id="picture" src="/img/profile_picture.jpg" alt="Picture of Thibaut Baguette">
     </div>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
   </section>
 
-  <div id="fill"></div>
+  <section id="timeline-screen" class="screen">
+
+  </section>
+
+  <section id="hobbies-screen" class="screen">
+    <div id="hobbies-background">
+      <img id="hobbies-picture" src="/img/bouldering.jpg" alt="Picture of me bouldering"/>
+    </div>
+    <h1 class="header">My Hobbies</h1>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+
+  <section id="contact-screen" class="screen">
+    <h1 class="header">Contact me:</h1>
+    <form id="contact-form" name="contactForm" action="javascript:;" onsubmit="return(validate());">
+      <input id="name-field" name="name" type="text" placeholder="Name" autocomplete="on" required/>
+      <input id="email-field" name="email" type="email" placeholder="Email address" autocomplete="on" required/>
+      <textarea id="content-field" name="content" placeholder="Content" required></textarea>
+      <input id="submit-button" type="submit" value="Send"/>
+    </form>
+  </section>
+
+  <footer-component></footer-component>
 </body>
 
 </html>
