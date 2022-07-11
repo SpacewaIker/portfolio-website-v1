@@ -60,3 +60,124 @@ header a {
         font-size: 1rem;
     }
 }
+@media screen and (max-width: 768px) {
+    header {
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--accent-color1);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Fira Code';
+        font-size: 24px;
+        transition-property: width, height, border-radius;
+        transition-duration: 0.7s;
+        box-shadow: 2px 5px 10px 0px black;
+        text-align: left;
+    }
+
+    header.open {
+        width: 300px;
+        height: 350px;
+        border-radius: 25px;
+    }
+
+    #menu-button:hover {
+        background: #333333;
+    }
+
+    #opening-bracket {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        transition-property: left;
+        transition-duration: 0.7s;
+    }
+
+    #opening-bracket.open {
+        left: 85px;
+    }
+
+    #closing-bracket {
+        position: absolute;
+        top: 16px;
+        left: 30px;
+        transition-property: top, left;
+        transition-duration: 0.7s;
+    }
+
+    #closing-bracket.open {
+        top: 260px;
+        left: 20px;
+    }
+
+    #comment {
+        position: absolute;
+        top: 0px;
+        left: -50px;
+        transition-property: opacity, left, top;
+        transition-duration: 0.5s;
+        transition-delay: 0.1s;
+        opacity: 0;
+    }
+
+    #comment.open {
+        top: 300px;
+        left: 20px;
+        opacity: 1;
+    }
+
+    .menu-content {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        top: -100px;
+        left: 50px;
+        transition-property: opacity, top;
+        transition-duration: 0.5s;
+        transition-delay: 0.1s;
+    }
+
+    .menu-content.open {
+        pointer-events: auto;
+        top: 45px;
+        opacity: 1;
+    }
+
+    .menu-content a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    .menu-content div {
+        padding: 0;
+        position: relative;
+        top: 40px;
+        left: 10px;
+    }
+
+    .menu-content div a {
+        display: inline;
+        padding: 0 10px;
+    }
+
+    #menu-title {
+        position: absolute;
+        opacity: 0;
+        left: -100px;
+        top: 16px;
+        transition-property: opacity, left;
+        transition-duration: 0.6s;
+    }
+
+    #menu-title.open {
+        opacity: 1;
+        left: 20px;
+    }
+}

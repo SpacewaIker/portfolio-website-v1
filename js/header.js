@@ -4,28 +4,54 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
-    this.innerHTML = `
-      <link rel="stylesheet" href="/css/header.css">
-      <header>
-        <svg id="header-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-          <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
-        </svg>
-        <nav id="page-links">
-          <a href="/index.html">menu() { Home();</a>
-          <a href="/html/projects.html">Projects();</a>
-          <a href="/html/experience.html">Experience();</a>
-          <a href="/html/education.html">Education();</a>
-          <a href="/html/hobbies.html">Hobbies(); }</a>
-        </nav>
-        <nav id="header-icons">
-          <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
-            <i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.github.com/SpacewaIker" target="_blank">
-            <i class="fa-brands fa-github"></i></a>
-          <a id="cv-icon" href="" target="_blank">CV</a>
-        </nav>
-      </header>
-    `;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      this.innerHTML = `
+        <link rel="stylesheet" href="/css/header.css">
+        <header>
+          <div id="menu-title">menu</div>
+          <div id="opening-bracket">{</div>
+          <nav class="menu-content">
+            <a href="/index.html">Home();</a>
+            <a href="/html/projects.html">Projects();</a>
+            <a href="/html/experience.html">Experience();</a>
+            <a href="/html/education.html">Education();</a>
+            <a href="/html/hobbies.html">Hobbies();</a>
+            <div>
+              <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.github.com/SpacewaIker" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+              <a id="cv-icon" href="" target="_blank">CV</a>
+            </div>
+          </nav>
+          <div id="closing-bracket">}</div>
+          <div id="comment">//</div>
+        </header>
+      `;
+    } else {
+      this.innerHTML = `
+        <link rel="stylesheet" href="/css/header.css">
+        <header>
+          <svg id="header-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
+          </svg>
+          <nav id="page-links">
+            <a href="/index.html">menu() { Home();</a>
+            <a href="/html/projects.html">Projects();</a>
+            <a href="/html/experience.html">Experience();</a>
+            <a href="/html/education.html">Education();</a>
+            <a href="/html/hobbies.html">Hobbies(); }</a>
+          </nav>
+          <nav id="header-icons">
+            <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
+              <i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.github.com/SpacewaIker" target="_blank">
+              <i class="fa-brands fa-github"></i></a>
+            <a id="cv-icon" href="" target="_blank">CV</a>
+          </nav>
+        </header>
+      `;
+    }
   }
 }
 
@@ -62,8 +88,29 @@ function updateHeaderSize() {
   poly.attr('points', `0 0, 1000 0, 1000 ${right}, 0 ${left}`);
 }
 
-window.addEventListener('scroll', updateHeaderSize);
 
 $(function () {
-  updateHeaderSize();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header').click(function () {
+      $('header').toggleClass("open");
+      $('#opening-bracket').toggleClass("open");
+      $('#closing-bracket').toggleClass("open");
+      $('.menu-content').toggleClass("open");
+      $('#header-icons').toggleClass("open");
+      $('#menu-title').toggleClass("open");
+      $('#comment').toggleClass("open");
+    });
+    $('section').click(function () {
+      $('header').removeClass("open");
+      $('#opening-bracket').removeClass("open");
+      $('#closing-bracket').removeClass("open");
+      $('.menu-content').removeClass("open");
+      $('#header-icons').removeClass("open");
+      $('#menu-title').removeClass("open");
+      $('#comment').removeClass("open");
+    });
+  } else {
+    window.addEventListener('scroll', updateHeaderSize);
+    updateHeaderSize();
+  }
 });
