@@ -17,7 +17,7 @@ class Header extends HTMLElement {
             <a href="/html/education.html">Education();</a>
             <a href="/html/hobbies.html">Hobbies();</a>
             <div>
-              <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
+              <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="test">
                 <i class="fa-brands fa-linkedin-in"></i></a>
               <a href="https://www.github.com/SpacewaIker" target="_blank">
                 <i class="fa-brands fa-github"></i></a>
@@ -36,18 +36,20 @@ class Header extends HTMLElement {
             <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
           </svg>
           <nav id="page-links">
-            <a href="/index.html">menu() { Home();</a>
-            <a href="/html/projects.html">Projects();</a>
-            <a href="/html/experience.html">Experience();</a>
-            <a href="/html/education.html">Education();</a>
-            <a href="/html/hobbies.html">Hobbies(); }</a>
+            menu() {
+            <a class="sliding-underline" href="/index.html">Home();</a>
+            <a class="sliding-underline" href="/html/projects.html">Projects();</a>
+            <a class="sliding-underline" href="/html/experience.html">Experience();</a>
+            <a class="sliding-underline" href="/html/education.html">Education();</a>
+            <a class="sliding-underline" href="/html/hobbies.html">Hobbies();</a>
+            }
           </nav>
           <nav id="header-icons">
-            <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
+            <a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="Connect with me!">
               <i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.github.com/SpacewaIker" target="_blank">
+            <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="Check my work out!">
               <i class="fa-brands fa-github"></i></a>
-            <a id="cv-icon" href="" target="_blank">CV</a>
+            <a class="sliding-underline" id="cv-icon" href="" target="_blank" title="Get my resume!">CV</a>
           </nav>
         </header>
       `;

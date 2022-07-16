@@ -32,12 +32,12 @@ footer .column {
 }
 
 footer ul {
-    padding: 0;
+    display: contents;
 }
 
 footer li {
     list-style: none;
-    margin: 5px 0;
+    margin: 2px 0;
 }
 
 footer h1 {
@@ -45,13 +45,17 @@ footer h1 {
     margin: 0;
 }
 
-#about-column p {
-    max-width: 15vw;
+#website-column h1 {
+    margin: 0 0 20px 0;
 }
 
 footer a {
     color: inherit;
     text-decoration: none;
+}
+
+footer .sliding-underline:hover:after {
+    background: var(--light-main);
 }
 
 @media screen and (max-width: 768px) {

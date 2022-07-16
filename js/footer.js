@@ -13,27 +13,27 @@ class Footer extends HTMLElement {
         <div id="website-column" class="column">
           <h1>Website Links</h1>
           <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html#intro-screen">About me</a></li>
-            <li><a href="/index.html#timeline-screen">Timeline</a></li>
-            <li><a href="/index.html#contact-screen">Contact</a></li>
+            <li><a class="sliding-underline" href="/index.html">Home</a></li>
+            <li><a class="sliding-underline" href="/index.html#intro-screen">About me</a></li>
+            <li><a class="sliding-underline" href="/index.html#timeline-screen">Timeline</a></li>
+            <li><a class="sliding-underline" href="/index.html#contact-screen">Contact</a></li>
           </ul>
         </div> 
         <div id="social-column" class="column">
           <h1>Social</h1>
-          <p><a href="mailto:thibaut.baguette@mail.mcgill.ca">Email<br/>
+          <p><a class="sliding-underline" href="mailto:thibaut.baguette@mail.mcgill.ca">Email<br/>
             thibaut.baguette@mail.mcgill.ca</a>
           </p>
           <ul>
-            <li><a href="https://www.github.com/SpacewaIker" target="_blank">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">LinkedIn</a></li>
-            <li><a href="" target="_blank">CV</a></li>
+            <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank">Github</a></li>
+            <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">LinkedIn</a></li>
+            <li><a class="sliding-underline" href="" target="_blank">CV</a></li>
           </ul>
         </div>
         <div id="about-column" class="column">
           <h1>About</h1>
-          <p>Website designed and built by Thibaut Baguette</p>
-          <p><a href="https://www.github.com/SpacewaIker/portfolio-website" target="_blank">
+          <p>Website designed and built by<br/>Thibaut Baguette</p>
+          <p><a class="sliding-underline" href="https://www.github.com/SpacewaIker/portfolio-website" target="_blank">
             Visit Website Repository
           </a></p>
         </div>
