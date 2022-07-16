@@ -1,8 +1,3 @@
-
-window.addEventListener('scroll', nameEvent);
-
-nameEvent();
-
 // Title/name animation
 function nameEvent() {
     var firstName = $('#first-name');
@@ -36,10 +31,10 @@ function nameEvent() {
         firstName.css('bottom', -firstNameVertical + 'px');
     } else {
         // Small screen:
-        var maxLNV = $(window).width() * 3;
-        var minLNV = 0;
-        var maxFNV = $(window).width() * 4;
-        var minFNV = 0;
+        var maxLNV = $(window).width() * 1.5;
+        var minLNV = -0.15 * $(window).width();
+        var maxFNV = $(window).width() * 0.5;
+        var minFNV = -0.35 * $(window).width();
 
         var lastNameVertical = minLNV + (maxLNV - minLNV) * scrollAmount / endScroll;
         var firstNameVertical = minFNV + (maxFNV - minFNV) * scrollAmount / endScroll;
@@ -49,16 +44,100 @@ function nameEvent() {
     }
 }
 
+function seekTrack() {
+    var track = $('#timeline-screen');
+    var frame = $('#frame');
+    var progressBar = $('#progress-bar');
+
+    var elementTop = track[0].getBoundingClientRect().top;
+    var vw = $(window).width() / 100;
+    var vh = $(window).height() / 100;
+
+    var scrollBegin = 100;//vh
+    var minVal = $(window).width() - $('#frame').outerWidth();
+
+    if (elementTop < scrollBegin * vh) {
+        let translateWidth = elementTop - scrollBegin * vh;
+        translateWidth = translateWidth < minVal ? minVal : translateWidth;
+        frame.css('transform', 'translateX(' + translateWidth + 'px)');
+        progressBar.css('left', -translateWidth + 'px');
+    } else {
+        frame.css('transform', 'translateX(0px)');
+        progressBar.css('left', '0px');
+    }
+}
+
+function revealTimeline() {
+    $('.circle').each(function (index, element) {
+        if ($(this)[0].getBoundingClientRect().left < 0.5 * $(window).width()) {
+            $(this).addClass('filled');
+        } else {
+            $(this).removeClass('filled');
+        }
+    });
+}
+
 roundingFunction = function (scrollTop, goingDown) {
     var vh = $(window).height();
-    const SCREEN_ONE = 0;
-    const SCREEN_TWO = vh * 1.1;
-    const SCREEN_THREE = vh * 2.14;
+    const SCREENS = [
+        0,
+        vh * 1.1,
+        vh * 2.14,
+        vh * 2.77,
+        vh * 3.38,
+        vh * 3.99,
+        vh * 4.61,
+        vh * 5.22,
+        vh * 5.83,
+        vh * 6.44,
+        vh * 7.05,
+        vh * 7.67,
+        vh * 8.28,
+        vh * 8.89,
+        vh * 9.50,
+        vh * 10.12,
+        vh * 11.09,
+        vh * 12.12,
+        vh * 12.42
+    ]
 
-    if (scrollTop < SCREEN_TWO) {
-        return goingDown ? SCREEN_TWO : SCREEN_ONE;
-    } else if (scrollTop < SCREEN_THREE) {
-        return goingDown ? SCREEN_THREE : SCREEN_TWO;
+    if (scrollTop < SCREENS[1]) {
+        return goingDown ? SCREENS[1] : SCREENS[0];
+    } else if (scrollTop < SCREENS[2]) {
+        return goingDown ? SCREENS[2] : SCREENS[1];
+    } else if (scrollTop < SCREENS[3]) {
+        return goingDown ? SCREENS[3] : SCREENS[2];
+    } else if (scrollTop < SCREENS[4]) {
+        return goingDown ? SCREENS[4] : SCREENS[3];
+    } else if (scrollTop < SCREENS[5]) {
+        return goingDown ? SCREENS[5] : SCREENS[4];
+    } else if (scrollTop < SCREENS[6]) {
+        return goingDown ? SCREENS[6] : SCREENS[5];
+    } else if (scrollTop < SCREENS[7]) {
+        return goingDown ? SCREENS[7] : SCREENS[6];
+    } else if (scrollTop < SCREENS[8]) {
+        return goingDown ? SCREENS[8] : SCREENS[7];
+    } else if (scrollTop < SCREENS[9]) {
+        return goingDown ? SCREENS[9] : SCREENS[8];
+    } else if (scrollTop < SCREENS[10]) {
+        return goingDown ? SCREENS[10] : SCREENS[9];
+    } else if (scrollTop < SCREENS[11]) {
+        return goingDown ? SCREENS[11] : SCREENS[10];
+    } else if (scrollTop < SCREENS[12]) {
+        return goingDown ? SCREENS[12] : SCREENS[11];
+    } else if (scrollTop < SCREENS[13]) {
+        return goingDown ? SCREENS[13] : SCREENS[12];
+    } else if (scrollTop < SCREENS[14]) {
+        return goingDown ? SCREENS[14] : SCREENS[13];
+    } else if (scrollTop < SCREENS[15]) {
+        return goingDown ? SCREENS[15] : SCREENS[14];
+    } else if (scrollTop < SCREENS[16]) {
+        return goingDown ? SCREENS[16] : SCREENS[15];
+    } else if (scrollTop < SCREENS[17]) {
+        return goingDown ? SCREENS[17] : SCREENS[16];
+    } else if (scrollTop < SCREENS[18]) {
+        return goingDown ? SCREENS[18] : SCREENS[17];
+    
     } else {
         return scrollTop;
     }
@@ -73,3 +152,33 @@ function validate() {
     var email = document.contactForm.email.value;
     var content = document.contactForm.content.value;
 }
+
+
+let timelineMaxScroll;
+$(function () {
+    timelineMaxScroll = ($(window).width() + $('.timeline-item').last().outerWidth()) / 2;
+    let timelineWidth = 0;
+    $('.timeline-section').each(function (index, element) {
+        timelineWidth += $(this).outerWidth(true);
+    });
+    timelineMaxScroll -= timelineWidth;
+
+    $('#timeline-rail').css('width', $('#frame').outerWidth());
+
+    window.addEventListener('scroll', nameEvent);
+    window.addEventListener('scroll', seekTrack);
+    window.addEventListener('scroll', revealTimeline);
+
+    nameEvent();
+    seekTrack();
+
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        var el = document.createElement('div');
+        el.id = 'overfill';
+        var el2 = document.createElement('div');
+        el2.setAttribute('style', 'height: calc(100vh - ' + $(window).height() + 'px);');
+        el.appendChild(el2);
+        document.body.appendChild(el);
+    }
+});
