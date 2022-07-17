@@ -1,3 +1,5 @@
+const email = 'thibaut.baguette@mail.mcgill.ca';
+
 class Header extends HTMLElement {
   constructor() {
     super();
@@ -22,6 +24,7 @@ class Header extends HTMLElement {
               <a href="https://www.github.com/SpacewaIker" target="_blank">
                 <i class="fa-brands fa-github"></i></a>
               <a id="cv-icon" href="" target="_blank">CV</a>
+              <a id="at-icon" href="mailto:${email}">@</a>
             </div>
           </nav>
           <div id="closing-bracket">}</div>
@@ -50,6 +53,7 @@ class Header extends HTMLElement {
             <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="Check my work out!">
               <i class="fa-brands fa-github"></i></a>
             <a class="sliding-underline" id="cv-icon" href="" target="_blank" title="Get my resume!">CV</a>
+            <a class="sliding-underline" id="at-icon" href="mailto:${email}" title="Send me an email!">@</a>
           </nav>
         </header>
       `;

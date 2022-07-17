@@ -1,3 +1,5 @@
+const email = 'thibaut.baguette@mail.mcgill.ca';
+
 class Footer extends HTMLElement {
   constructor() {
     super();
@@ -21,8 +23,7 @@ class Footer extends HTMLElement {
         </div> 
         <div id="social-column" class="column">
           <h1>Social</h1>
-          <p><a class="sliding-underline" href="mailto:thibaut.baguette@mail.mcgill.ca">Email<br/>
-            thibaut.baguette@mail.mcgill.ca</a>
+          <p><a class="sliding-underline" href="mailto:${email}">Email<br/>${email}</a>
           </p>
           <ul>
             <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank">Github</a></li>
