@@ -1,8 +1,18 @@
-const email = 'thibaut.baguette@mail.mcgill.ca';
-
+/**
+ * Define a header to be used on all pages.
+ * 
+ * !! This element requires an 'email' const to be set.
+ */
 class Header extends HTMLElement {
   constructor() {
     super();
+
+    try {
+      email;
+    } catch (e) {
+      console.error('Footer email const is not set!');
+      var email = '';
+    }
   }
 
   connectedCallback() {
@@ -63,6 +73,9 @@ class Header extends HTMLElement {
 
 customElements.define('header-component', Header);
 
+/**
+ * Animation for the header SVG background.
+ */
 function updateHeaderSize() {
   // scroll to this amount and the animation will be finished
   var endScroll = $(window).height();
@@ -80,6 +93,7 @@ function updateHeaderSize() {
     var minRight = 100;
   }
 
+  // get the left-size and right-size tags from the html
   try {
     var maxLeft = $('header-component')[0].attributes.getNamedItem('left-size').value;
     var maxRight = $('header-component')[0].attributes.getNamedItem('right-size').value;
@@ -96,6 +110,7 @@ function updateHeaderSize() {
 
 
 $(function () {
+  // on mobile, toggle the menu when the user clicks on the menu icon
   if (window.matchMedia('(max-width: 768px)').matches) {
     $('header').click(function () {
       $('header').toggleClass("open");
@@ -115,7 +130,9 @@ $(function () {
       $('#menu-title').removeClass("open");
       $('#comment').removeClass("open");
     });
-  } else {
+  }
+  // on desktop, use the function defined above
+  else {
     window.addEventListener('scroll', updateHeaderSize);
     updateHeaderSize();
   }

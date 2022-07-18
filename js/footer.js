@@ -1,8 +1,18 @@
-const email = 'thibaut.baguette@mail.mcgill.ca';
-
+/**
+ * Define a footer to be used on all pages.
+ * 
+ * !! This element requires an 'email' const to be set.
+ */
 class Footer extends HTMLElement {
   constructor() {
     super();
+
+    try {
+      email;
+    } catch (e) {
+      console.error('Footer email const is not set!');
+      var email = '';
+    }
   }
 
   connectedCallback() {
