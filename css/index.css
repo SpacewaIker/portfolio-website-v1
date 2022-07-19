@@ -1,3 +1,5 @@
+@import url(./styles.css);
+
 :root {
     --timeline-length: 650vw;
 }
@@ -40,7 +42,6 @@
     margin: 0;
     font-family: 'Raleway';
     font-weight: 100;
-    mix-blend-mode: hard-light;
 }
 
 
@@ -372,6 +373,7 @@
 
     #name-container h1 {
         font-size: 23vw;
+        text-shadow: 0 0 10px black;
     }
 
     #name-container #first-name {
@@ -396,6 +398,7 @@
         width: 90vw;
         left: 5vw;
         right: auto;
+        top: 55vh;
     }
 
     #hobbies-screen img {

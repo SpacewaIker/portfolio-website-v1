@@ -1,3 +1,9 @@
+@import url(http://fonts.cdnfonts.com/css/bahnschrift);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 :root {
     --accent-color1: #6128ff;
     --accent-color2: #fff157;

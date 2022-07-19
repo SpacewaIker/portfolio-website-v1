@@ -7,6 +7,23 @@ function nameEvent() {
     var endScroll = $(window).height() * 0.7;
     var scrollAmount = scrollTop < endScroll ? scrollTop : endScroll;
 
+    var maxR = 97;
+    var minR = 41;
+    var maxG = 40;
+    var minG = 0;
+    var maxB = 255;
+    var minB = 41;
+    // first color: rgb(41 0 41)
+    // second color: rgb(97 40 255)
+
+    var red = minR + (maxR - minR) * scrollAmount / endScroll;
+    var green = minG + (maxG - minG) * scrollAmount / endScroll;
+    var blue = minB + (maxB - minB) * scrollAmount / endScroll;
+    var color = 'rgb(' + red + ' ' + green + ' ' + blue + ')';
+
+    firstName.css('color', color);
+    lastName.css('color', color);
+
     if (window.matchMedia('(min-width: 768px)').matches) {
         // Large screen:
 
@@ -15,9 +32,11 @@ function nameEvent() {
         var maxFNC = ($(window).width() - firstName.width()) * 0.95;
         var minFNC = 0;
 
-        var maxLNV = $(window).width() * 0.4;
+        // var maxLNV = $(window).width() * 0.4;
+        var maxLNV = $(window).height() * 0.675;
         var minLNV = 0;
-        var maxFNV = $(window).width() * 0.3;
+        // var maxFNV = $(window).width() * 0.3;
+        var maxFNV = $(window).height() * 0.475;
         var minFNV = 0;
 
         var lastNameCentering = minLNC + (maxLNC - minLNC) * scrollAmount / endScroll;
@@ -31,9 +50,9 @@ function nameEvent() {
         firstName.css('bottom', -firstNameVertical + 'px');
     } else {
         // Small screen:
-        var maxLNV = $(window).width() * 1.5;
+        var maxLNV = $(window).width() * 1.6;
         var minLNV = -0.15 * $(window).width();
-        var maxFNV = $(window).width() * 0.5;
+        var maxFNV = $(window).width() * 1.4;
         var minFNV = -0.35 * $(window).width();
 
         var lastNameVertical = minLNV + (maxLNV - minLNV) * scrollAmount / endScroll;
