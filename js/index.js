@@ -96,82 +96,11 @@ function revealTimeline() {
     });
 }
 
-roundingFunction = function (scrollTop, goingDown) {
-    var vh = $(window).height();
-    const SCREENS = [
-        0,
-        vh * 1.1,
-        vh * 2.14,
-        vh * 2.77,
-        vh * 3.38,
-        vh * 3.99,
-        vh * 4.61,
-        vh * 5.22,
-        vh * 5.83,
-        vh * 6.44,
-        vh * 7.05,
-        vh * 7.67,
-        vh * 8.28,
-        vh * 8.89,
-        vh * 9.50,
-        vh * 10.12,
-        vh * 11.09,
-        vh * 12.12,
-        vh * 12.42
-    ]
-
-    if (scrollTop < SCREENS[1]) {
-        return goingDown ? SCREENS[1] : SCREENS[0];
-    } else if (scrollTop < SCREENS[2]) {
-        return goingDown ? SCREENS[2] : SCREENS[1];
-    } else if (scrollTop < SCREENS[3]) {
-        return goingDown ? SCREENS[3] : SCREENS[2];
-    } else if (scrollTop < SCREENS[4]) {
-        return goingDown ? SCREENS[4] : SCREENS[3];
-    } else if (scrollTop < SCREENS[5]) {
-        return goingDown ? SCREENS[5] : SCREENS[4];
-    } else if (scrollTop < SCREENS[6]) {
-        return goingDown ? SCREENS[6] : SCREENS[5];
-    } else if (scrollTop < SCREENS[7]) {
-        return goingDown ? SCREENS[7] : SCREENS[6];
-    } else if (scrollTop < SCREENS[8]) {
-        return goingDown ? SCREENS[8] : SCREENS[7];
-    } else if (scrollTop < SCREENS[9]) {
-        return goingDown ? SCREENS[9] : SCREENS[8];
-    } else if (scrollTop < SCREENS[10]) {
-        return goingDown ? SCREENS[10] : SCREENS[9];
-    } else if (scrollTop < SCREENS[11]) {
-        return goingDown ? SCREENS[11] : SCREENS[10];
-    } else if (scrollTop < SCREENS[12]) {
-        return goingDown ? SCREENS[12] : SCREENS[11];
-    } else if (scrollTop < SCREENS[13]) {
-        return goingDown ? SCREENS[13] : SCREENS[12];
-    } else if (scrollTop < SCREENS[14]) {
-        return goingDown ? SCREENS[14] : SCREENS[13];
-    } else if (scrollTop < SCREENS[15]) {
-        return goingDown ? SCREENS[15] : SCREENS[14];
-    } else if (scrollTop < SCREENS[16]) {
-        return goingDown ? SCREENS[16] : SCREENS[15];
-    } else if (scrollTop < SCREENS[17]) {
-        return goingDown ? SCREENS[17] : SCREENS[16];
-    } else if (scrollTop < SCREENS[18]) {
-        return goingDown ? SCREENS[18] : SCREENS[17];
-    
-    } else {
-        return scrollTop;
-    }
-}
-
-// $(window).scrollEnd(function () {
-//     scrollMagnet(roundingFunction);
-// }, 100);
-
 function validate() {
     var name = document.contactForm.name.value;
     var email = document.contactForm.email.value;
     var content = document.contactForm.content.value;
 }
-
 
 let timelineMaxScroll;
 $(function () {
