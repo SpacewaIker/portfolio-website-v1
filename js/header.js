@@ -16,7 +16,7 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
-    if (window.matchMedia('(max-width: 768px)').matches) {
+    if (window.matchMedia('(max-width: 850px)').matches) {
       this.innerHTML = `
         <link rel="stylesheet" href="/css/header.css">
         <header>
@@ -89,8 +89,8 @@ function updateHeaderSize() {
     var minLeft = 50;
     var minRight = 80;
   } else {
-    var minLeft = 70;
-    var minRight = 100;
+    var minLeft = 80;
+    var minRight = 110;
   }
 
   // get the left-size and right-size tags from the html
@@ -111,7 +111,7 @@ function updateHeaderSize() {
 
 $(function () {
   // on mobile, toggle the menu when the user clicks on the menu icon
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  if (window.matchMedia('(max-width: 850px)').matches) {
     $('header').click(function () {
       $('header').toggleClass("open");
       $('#opening-bracket').toggleClass("open");
