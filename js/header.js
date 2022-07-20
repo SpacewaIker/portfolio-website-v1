@@ -23,7 +23,7 @@ class Header extends HTMLElement {
           <div id="menu-title">menu</div>
           <div id="opening-bracket">{</div>
           <nav class="menu-content">
-            <a href="/index.html">Home();</a>
+            <a href="/html/index.html">Home();</a>
             <a href="/html/projects.html">Projects();</a>
             <a href="/html/experience.html">Experience();</a>
             <a href="/html/education.html">Education();</a>
@@ -50,7 +50,7 @@ class Header extends HTMLElement {
           </svg>
           <nav id="page-links">
             menu() {
-            <a class="sliding-underline" href="/index.html">Home();</a>
+            <a class="sliding-underline" href="/html/index.html">Home();</a>
             <a class="sliding-underline" href="/html/projects.html">Projects();</a>
             <a class="sliding-underline" href="/html/experience.html">Experience();</a>
             <a class="sliding-underline" href="/html/education.html">Education();</a>
@@ -86,11 +86,17 @@ function updateHeaderSize() {
 
 
   if (window.matchMedia("(min-height: 850px)").matches) {
+    // Large height screens
     var minLeft = 50;
     var minRight = 80;
-  } else {
+  } else if (window.matchMedia("(min-height: 600px)").matches) {
+    // medium height screens
     var minLeft = 80;
     var minRight = 110;
+  } else {
+    // small height screens
+    var minLeft = 100;
+    var minRight = 130;
   }
 
   // get the left-size and right-size tags from the html

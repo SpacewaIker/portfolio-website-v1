@@ -20,6 +20,12 @@ body {
     font-family: 'Bahnschrift';
 }
 
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
 .header {
     position: relative;
     font-size: 3rem;

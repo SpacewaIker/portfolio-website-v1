@@ -4,12 +4,6 @@
     --timeline-length: 650vw;
 }
 
-.screen {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
 #intro-screen {
     background-color: var(--dark-main);
     position: relative;
@@ -55,7 +49,7 @@
 
 #separator-container {
     width: 100%;
-    height: 150px;
+    height: 15vh;
 }
 
 #separator-svg {
@@ -67,8 +61,8 @@
 #picture-container {
     position: absolute;
     overflow: hidden;
-    left: -4vw;
-    top: 75px;
+    left: -5vw;
+    top: 7vh;
     height: 40vw;
     width: 40vw;
     border-radius: 0 35% 35% 0;
@@ -85,7 +79,7 @@
     position: absolute;
     color: var(--light-main);
     width: 55vw;
-    top: 50vh;
+    top: calc(-5vh + 35vw);
     right: 5vw;
 }
 
@@ -222,7 +216,7 @@
     z-index: -3;
     transform: rotate(15deg);
     margin-left: 1.5vw;
-    background-repeat: repeat;
+    background: linear-gradient(90deg, var(--accent-color1), var(--light-main) 5vw);
     display: flex;
     align-items: center;
 }
@@ -243,15 +237,12 @@
 }
 
 #f21 .timeline-background {
-    background-color: #c47a5a;
 }
 
 #w22 .timeline-background {
-    background-color: #6cc1d9;
 }
 
 #s22 .timeline-background {
-    background-color: #f0973f;
 }
 
 #f22, #w23 {
@@ -259,11 +250,11 @@
 }
 
 #f22 .timeline-background {
-    background-color: var(--dark-accent);
+    /* background-color: var(--dark-accent); */
 }
 
 #w23 .timeline-background {
-    background-color: var(--dark-main);
+    /* background-color: var(--dark-main); */
 }
 
 #hobbies-screen {
@@ -359,6 +350,12 @@
     background-color: var(--accent-color2);
     color: var(--accent-color1);
     cursor: pointer;
+}
+
+@media screen and (max-height: 760px) {
+    #intro-screen {
+        height: 150vh;
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -32,11 +32,9 @@ function nameEvent() {
         var maxFNC = ($(window).width() - firstName.width()) * 0.95;
         var minFNC = 0;
 
-        // var maxLNV = $(window).width() * 0.4;
-        var maxLNV = $(window).height() * 0.675;
+        var maxLNV = $(window).height() * 0.25 + $(window).width() * 0.25;
         var minLNV = 0;
-        // var maxFNV = $(window).width() * 0.3;
-        var maxFNV = $(window).height() * 0.475;
+        var maxFNV = $(window).height() * 0.25 + $(window).width() * 0.125;
         var minFNV = 0;
 
         var lastNameCentering = minLNC + (maxLNC - minLNC) * scrollAmount / endScroll;
