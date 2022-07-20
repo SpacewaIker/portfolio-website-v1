@@ -25,20 +25,22 @@ class Footer extends HTMLElement {
         <div id="website-column" class="column">
           <h1>Website Links</h1>
           <ul>
-            <li><a class="sliding-underline" href="/index.html">Home</a></li>
-            <li><a class="sliding-underline" href="/index.html#intro-screen">About me</a></li>
-            <li><a class="sliding-underline" href="/index.html#timeline-screen">Timeline</a></li>
-            <li><a class="sliding-underline" href="/index.html#contact-screen">Contact</a></li>
+            <li><a class="sliding-underline" href="/html/index.html">Home</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#intro-screen">About me</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#timeline-screen">Timeline</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#contact-screen">Contact</a></li>
           </ul>
         </div> 
         <div id="social-column" class="column">
           <h1>Social</h1>
-          <p><a class="sliding-underline" href="mailto:${email}">Email<br/>${email}</a>
+          <div id="copy-popup">Email Copied!</div>
+          <p class="sliding-underline" onclick="copyEmail()" title="Copy my email!">
+            Email<br/>${email}
           </p>
           <ul>
-            <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank">Github</a></li>
-            <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">LinkedIn</a></li>
-            <li><a class="sliding-underline" href="" target="_blank">CV</a></li>
+            <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="Check my work out!">Github</a></li>
+            <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="Connect with me!">LinkedIn</a></li>
+            <li><a class="sliding-underline" href="" target="_blank" title="Get my resume!">CV</a></li>
           </ul>
         </div>
         <div id="about-column" class="column">
@@ -51,6 +53,16 @@ class Footer extends HTMLElement {
       </footer>
     `;
   }
+}
+
+function copyEmail() {
+  var el = document.createElement('input');
+  document.body.appendChild(el);
+  el.value = email;
+  el.select();
+  document.execCommand('copy', false);
+  el.remove();
+  $('#copy-popup').fadeIn(300).delay(500).fadeOut(500);
 }
 
 customElements.define('footer-component', Footer);
