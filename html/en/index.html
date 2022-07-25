@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Thibaut Baguette | Software Engineer</title>
+
+  <!-- Constants used throughout -->
+  <script>
+    const email = 'thibaut.baguette@mail.mcgill.ca';
+  </script>
+
+  <!-- Styles and fonts -->
+  <link rel="stylesheet" href="/css/index.css">
+  <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
+  <!-- HACK: change fontawesome settings to specific domains -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/index.js"></script>
+</head>
+
+<body>
+  <header-component left-size="100" right-size="850"></header-component>
+
+  <section id="title-screen" class="screen">
+    <div id="name-container">
+      <h2 id="greeting">Hello there. I'm</h2>
+      <h1 id="first-name">Thibaut</h1>
+      <h1 id="last-name">Baguette</h1>
+    </div>
+  </section>
+
+  <section id="separator-container">
+    <svg id="separator-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30,100 0,100 70,0 100"></polyline>
+    </svg>
+  </section>
+
+  <section id="intro-screen" class="screen">
+    <div id="picture-container">
+      <img id="picture" src="/img/profile_picture.jpg" alt="Picture of Thibaut Baguette">
+    </div>
+    <p class="paragraph">
+      I'm a software engineering student at McGill University with an interest in artificial intelligence, game development, and robotics.
+      <br/><br/>
+      I love learning and have developed my skills as an autonomous developer and autodidact through personal projects. Scroll down to learn more about my work experience!
+    </p>
+  </section>
+
+  <section id="timeline-screen" class="screen">
+    <div id="timeline-title-container">
+      <h1 class="header" id="timeline-title">Timeline of my projects and experience:</h1>
+    </div>
+    <div id="camera">
+      <div id="frame">
+        <div id="progress-bar-wrapper">
+          <div id="timeline-rail">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+        <div class="timeline-section" id="pre-uni">
+          <div class="timeline-item" id="first">
+            <div class="top-row">Beginning to Learn Programming
+              <div class="date">September 2019</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">Bored in-between my CEGEP courses, I began learning python and worked my way through small exercices</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Guitar Practice Tool
+              <div class="date">May 2020</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">As my first bigger project, I made a GUI desktop app to help me practice the guitar</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Borderlands 3 DPS Calculator
+              <div class="date">June 2020</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">Wanting to tackle mobile apps next, I solved a problem I encountred while playing Borderlands 3: comparing weapons damage. So I made a calculator for that!</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Hangman
+              <div class="date">July 2020</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">As I was looking for a different kind of project, I created a game of Hangman with an on-screen keyboard and animations</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Math & Physics Tutoring
+              <div class="date">Fall 2020 Semester</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">During this semester, I started to tutor students in my CEGEP who had difficulty in the fields of Calculus, Mechanics, and Electromagnetism</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Snake Game
+              <div class="date">January 2021</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">Going back to the roots of video game history, I made a clone of the classic Snake game. This game was complete with beeps and crashes and a highscore feature</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">College Graduation
+              <div class="date">May 2021</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">After two years of study, I received my college diploma! I was now ready to start my study of Software Engineering at McGill University!</div>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="f21">
+          <div class="timeline-background">
+            Fall 2021 Semester
+            <ul class="timeline-courses">
+              <li>Intro to Software Development</li>
+              <li>Electric Circuits I</li>
+              <li>Intermediate Calculus</li>
+              <li>ODEs for Engineers</li>
+              <li>Communication in Engineering</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Beginning of Bachelor's Degree
+              <div class="date">September 2021</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">LIPSUM</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">McGill AI Society Bootcamp
+              <div class="date">Fall 2021 Semester</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">I was chosen among the top 30 applicants to participate in an introductory AI bootcamp, which consisted of two hours of teaching per week and multiple projects</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Pong Game
+              <div class="date">October 2021</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">As my first Java project, I created a clone of Pong. I also added features such as a pause feature and in-game color customization, variable speed, and opponent difficulty</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Air Draw
+              <div class="date">November 2021</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">This was the final project for the AI Bootcamp. With the help of another student, I created an AI-based game where the user can draw shapes by waving their hand and making hand signs in front of a camera</div>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="w22">
+          <div class="timeline-background">
+            Winter 2022 Semester
+            <ul class="timeline-courses">
+              <li>Model-Based Programming</li>
+              <li>Introduction to Computer Science</li>
+              <li>Digital Logic</li>
+              <li>Discrete Structures</li>
+              <li>Intro to the Engineering Profession</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">DiveSafe Project
+              <div class="date">Winter 2022 Semester</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">With the help of five other students, I worked on a desktop GUI managing app for a fictional diving company. Based on the Model-View-Controller design pattern, this program allowed administrators to manage users, schedules, and equipment</div>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="s22">
+          <div class="timeline-background">
+            Summer 2022 Semester
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">GIS Developer Intern at Fujitsu
+              <div class="date">May-July 2022</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">I developed a proof of concept for a web-based mobile application related to indoor routing. I researched the technologies that would be used, and worked with Docker containers and a PostgreSQL database</div>
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Portfolio Website
+              <div class="date">May-August 2022</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">I created this website with HTML, CSS, JavaScript, and inspiration and ingenuity!</div>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="f22">
+          <div class="timeline-background">
+            Fall 2022 Semester
+            <ul class="timeline-courses">
+              <li>Intro to Software Engineering</li>
+              <li>Intro to Software Systems</li>
+              <li>Algorithms and Data Structures</li>
+              <li>Design Principles and Methods</li>
+              <li>Prob and Stats for Engineers</li>
+              <li>Resp. of the Professional Engineer</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="w23">
+          <div class="timeline-background">
+            Winter 2023 Semester
+            <ul class="timeline-courses">
+              <li>Software Engineering Practice</li>
+              <li>Applied Machine Learning</li>
+              <li>Algorithm Design</li>
+              <li>Computer Organization</li>
+              <li>Engineering Economy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-section" id="s23">
+          <div class="timeline-background">
+            Summer 2023 Semester
+          </div>
+          <div class="timeline-item">
+            <div class="top-row">Internship at your company
+              <div class="date">Spring/Summer 2023</div>
+            </div>
+            <div class="middle-row"><div class="circle"></div></div>
+            <div class="bottom-row">Summary of an awesome work experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies-screen" class="screen">
+    <div id="hobbies-background"></div>
+    <img id="hobbies-picture" src="/img/bouldering.jpg" alt="Picture of me bouldering"/>
+    <h1 class="header">My Hobbies</h1>
+    <p class="paragraph">
+      As a student and employee, I believe that having good work-life balance is primordial, as it develops good time management skills and allows the mind to rest and makes me more productive. 
+    </p>
+    <p class="paragraph">
+      As such, I exercise regularly through calisthenics, bouldering, and acrobatics. I also play the elecric guitar, and I dabble in guitar electronics and guitar making.
+    </p>
+  </section>
+
+  <section id="contact-screen" class="screen">
+    <h1 class="header">Contact me:</h1>
+    <form id="contact-form" name="contactForm" action="javascript:;"
+          onsubmit="return(validate());">
+      <input id="name-field" name="name" type="text" placeholder="Name"
+             autocomplete="on" required/>
+      <input id="email-field" name="email" type="email" placeholder="Email address" 
+             autocomplete="on" required/>
+      <textarea id="content-field" name="content" placeholder="Content" required></textarea>
+      <input id="submit-button" type="submit" value="Send"/>
+    </form>
+  </section>
+
+  <footer-component></footer-component>
+</body>
+
+</html>

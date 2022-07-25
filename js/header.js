@@ -13,23 +13,70 @@ class Header extends HTMLElement {
       console.error('Footer email const is not set!');
       var email = '';
     }
+
+    currentLang = $('html').attr('lang');
+    switchToLang = 'NA';
+    if (currentLang === 'fr') {
+      switchToLang = 'en';
+    } else if (currentLang === 'en') {
+      switchToLang = 'fr';
+    }
   }
 
   connectedCallback() {
+    var content = {
+      home: {
+        en: 'Home();',
+        fr: 'Accueil();'
+      },
+      projects: {
+        en: 'Projects();',
+        fr: 'Projets();'
+      },
+      experience: {
+        en: 'Experience();',
+        fr: 'Expérience();'
+      },
+      education: {
+        en: 'Education();',
+        fr: 'Éducation();'
+      },
+      hobbies: {
+        en: 'Hobbies();',
+        fr: 'Loisirs();'
+      },
+      linkedin: {
+        en: 'Connect with me!',
+        fr: 'Connecter avec moi!'
+      },
+      github: {
+        en: 'Check out my work!',
+        fr: 'Voir mon travail!'
+      },
+      email: {
+        en: 'Send me an email!',
+        fr: 'Envoyer un courriel!'
+      },
+      cv: {
+        en: 'Get my resume!',
+        fr: 'Obtenir mon CV!'
+      },
+    }
+
     if (window.matchMedia('(max-width: 850px)').matches) {
       this.innerHTML = `
         <link rel="stylesheet" href="/css/header.css">
         <header>
-          <div id="menu-title">menu</div>
+          <div id="menu-title">menu(<div class="sliding-underline" onclick="switchLang()" id="lang">${currentLang}</div>)</div>
           <div id="opening-bracket">{</div>
           <nav class="menu-content">
-            <a href="/html/index.html">Home();</a>
-            <a href="/html/projects.html">Projects();</a>
-            <a href="/html/experience.html">Experience();</a>
-            <a href="/html/education.html">Education();</a>
-            <a href="/html/hobbies.html">Hobbies();</a>
+            <a href="./">${content.home[currentLang]}</a>
+            <a href="./projects.html">${content.projects[currentLang]}</a>
+            <a href="./experience.html">${content.experience[currentLang]}</a>
+            <a href="./education.html">${content.education[currentLang]}</a>
+            <a href="./hobbies.html">${content.hobbies[currentLang]}</a>
             <div>
-              <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="test">
+              <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
                 <i class="fa-brands fa-linkedin-in"></i></a>
               <a href="https://www.github.com/SpacewaIker" target="_blank">
                 <i class="fa-brands fa-github"></i></a>
@@ -49,21 +96,21 @@ class Header extends HTMLElement {
             <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
           </svg>
           <nav id="page-links">
-            menu() {
-            <a class="sliding-underline" href="/html/index.html">Home();</a>
-            <a class="sliding-underline" href="/html/projects.html">Projects();</a>
-            <a class="sliding-underline" href="/html/experience.html">Experience();</a>
-            <a class="sliding-underline" href="/html/education.html">Education();</a>
-            <a class="sliding-underline" href="/html/hobbies.html">Hobbies();</a>
+            menu(<div class="sliding-underline" onclick="switchLang()" id="lang">${currentLang}</div>) {
+            <a class="sliding-underline" href="./">${content.home[currentLang]}</a>
+            <a class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
+            <a class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
+            <a class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
             }
           </nav>
           <nav id="header-icons">
-            <a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="Connect with me!">
+            <a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="${content.linkedin[currentLang]}">
               <i class="fa-brands fa-linkedin-in"></i></a>
-            <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="Check my work out!">
+            <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">
               <i class="fa-brands fa-github"></i></a>
-            <a class="sliding-underline" id="cv-icon" href="" target="_blank" title="Get my resume!">CV</a>
-            <a class="sliding-underline" id="at-icon" href="mailto:${email}" title="Send me an email!">@</a>
+            <a class="sliding-underline" id="cv-icon" href="" target="_blank" title="${content.cv[currentLang]}">CV</a>
+            <a class="sliding-underline" id="at-icon" href="mailto:${email}" title="${content.email[currentLang]}">@</a>
           </nav>
         </header>
       `;
@@ -72,6 +119,15 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+var currentLang;
+var switchToLang;
+
+function switchLang() {
+  var url = window.location.href;
+  url = url.replace(currentLang, switchToLang);
+  window.location.assign(url);
+}
 
 /**
  * Animation for the header SVG background.

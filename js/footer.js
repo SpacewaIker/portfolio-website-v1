@@ -16,6 +16,65 @@ class Footer extends HTMLElement {
   }
 
   connectedCallback() {
+    var content = {
+      website: {
+        en: 'Website Links',
+        fr: 'Liens du site'
+      },
+      home: {
+        en: 'Home',
+        fr: 'Accueil'
+      },
+      aboutme: {
+        en: 'About me',
+        fr: 'À propos de moi'
+      },
+      timeline: {
+        en: 'Timeline',
+        fr: 'Chronologie'
+      },
+      contact: {
+        en: 'Contact',
+        fr: 'Contact'
+      },
+      social: {
+        en: 'Social',
+        fr: 'Social'
+      },
+      popup: {
+        en: 'Email Copied!',
+        fr: 'Courriel copié!'
+      },
+      email: {
+        en: 'Copy my email address!',
+        fr: 'Copier mon adresse courriel!'
+      },
+      github: {
+        en: 'Check out my work!',
+        fr: 'Voir mon travail!'
+      },
+      linkedin: {
+        en: 'Connect with me!',
+        fr: 'Connecter avec moi!'
+      },
+      cv: {
+        en: 'Get my resume!',
+        fr: 'Obtenir mon CV!'
+      },
+      about: {
+        en: 'About',
+        fr: 'À propos'
+      },
+      credits: {
+        en: 'Website designed and built by',
+        fr: 'Site web conçu et construit par'
+      },
+      repo: {
+        en: 'Visit Website Repository',
+        fr: 'Visiter le dépôt du site web'
+      },
+    }
+
     this.innerHTML = `
       <link rel="stylesheet" href="/css/footer.css">
       <footer>
@@ -23,31 +82,31 @@ class Footer extends HTMLElement {
           <polyline points="0 100, 100 10, 100 100"></polyline>
         </svg>
         <div id="website-column" class="column">
-          <h1>Website Links</h1>
+          <h1>${content.website[currentLang]}</h1>
           <ul>
-            <li><a class="sliding-underline" href="/html/index.html">Home</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#intro-screen">About me</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#timeline-screen">Timeline</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#contact-screen">Contact</a></li>
+            <li><a class="sliding-underline" href="/html/index.html">${content.home[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#intro-screen">${content.aboutme[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#timeline-screen">${content.timeline[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="/html/index.html#contact-screen">${content.contact[currentLang]}</a></li>
           </ul>
         </div> 
         <div id="social-column" class="column">
-          <h1>Social</h1>
-          <div id="copy-popup">Email Copied!</div>
-          <p class="sliding-underline" onclick="copyEmail()" title="Copy my email!">
+          <h1>${content.social[currentLang]}</h1>
+          <div id="copy-popup">${content.popup[currentLang]}</div>
+          <p class="sliding-underline" onclick="copyEmail()" title="${content.email[currentLang]}">
             Email<br/>${email}
           </p>
           <ul>
-            <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="Check my work out!">Github</a></li>
-            <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="Connect with me!">LinkedIn</a></li>
-            <li><a class="sliding-underline" href="" target="_blank" title="Get my resume!">CV</a></li>
+            <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">Github</a></li>
+            <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="${content.linkedin[currentLang]}">LinkedIn</a></li>
+            <li><a class="sliding-underline" href="" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
           </ul>
         </div>
         <div id="about-column" class="column">
-          <h1>About</h1>
-          <p>Website designed and built by<br/>Thibaut Baguette</p>
+          <h1>${content.about[currentLang]}</h1>
+          <p>${content.credits[currentLang]}<br/>Thibaut Baguette</p>
           <p><a class="sliding-underline" href="https://www.github.com/SpacewaIker/portfolio-website" target="_blank">
-            Visit Website Repository
+            ${content.repo[currentLang]}
           </a></p>
         </div>
       </footer>
