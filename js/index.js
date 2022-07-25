@@ -70,11 +70,12 @@ function seekTrack() {
     var vw = $(window).width() / 100;
     var vh = $(window).height() / 100;
 
-    var scrollBegin = 100;//vh
+    // var scrollBegin = 100 * vw;
+    var scrollBegin = 0;
     var minVal = $(window).width() - $('#frame').outerWidth();
 
-    if (elementTop < scrollBegin * vh) {
-        let translateWidth = elementTop - scrollBegin * vh;
+    if (elementTop < scrollBegin) {
+        let translateWidth = elementTop - scrollBegin;
         translateWidth = translateWidth < minVal ? minVal : translateWidth;
         frame.css('transform', 'translateX(' + translateWidth + 'px)');
         progressBar.css('left', -translateWidth + 'px');
@@ -100,31 +101,29 @@ function validate() {
     var content = document.contactForm.content.value;
 }
 
-let timelineMaxScroll;
 $(function () {
-    timelineMaxScroll = ($(window).width() + $('.timeline-item').last().outerWidth()) / 2;
+    /* timelineWidth should be equal to the length of all the content,
+        plus the "padding" required to make the first and last items
+        centered. This is equal to 2 * (50vw - 1/2 itemWidth - sectionMargin) */
     let timelineWidth = 0;
     $('.timeline-section').each(function (index, element) {
         timelineWidth += $(this).outerWidth(true);
     });
-    timelineMaxScroll -= timelineWidth;
+    timelineWidth += $(window).width() - $($('.timeline-item')[0]).outerWidth(true) -
+        $('.timeline-section').css('margin-left').replace('px', '') * 2;
 
-    $('#timeline-rail').css('width', $('#frame').outerWidth());
+    $('#frame').css('width', timelineWidth + 'px');
+    $('#timeline-rail').css('width', timelineWidth + 'px');
 
     window.addEventListener('scroll', nameEvent);
-    window.addEventListener('scroll', seekTrack);
     window.addEventListener('scroll', revealTimeline);
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        window.addEventListener('scroll', seekTrack);
+        $('#timeline-screen').css('height',
+            ($(window).height() + timelineWidth - $(window).width()) + 'px');
+    }
 
     nameEvent();
     seekTrack();
-
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        var el = document.createElement('div');
-        el.id = 'overfill';
-        var el2 = document.createElement('div');
-        el2.setAttribute('style', 'height: calc(100vh - ' + $(window).height() + 'px);');
-        el.appendChild(el2);
-        document.body.appendChild(el);
-    }
+    revealTimeline();
 });

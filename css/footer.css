@@ -93,4 +93,8 @@ footer .sliding-underline:hover:after {
     footer p {
         margin: 10px;
     }
+
+    #copy-popup {
+        top: 270px;
+    }
 }
