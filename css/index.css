@@ -244,7 +244,7 @@
     min-width: 600px;
 }
 
-#hobbies-screen {
+#skills-screen {
     position: relative;
     background-color: var(--accent-color1);
     z-index: -2;
@@ -252,23 +252,44 @@
     color: var(--light-main);
 }
 
-#hobbies-background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: var(--dark-main);
-    transform: rotate(-3deg);
-    z-index: -1;
-    overflow: hidden;
+#skills-screen>* {
+    top: 4vh;
 }
 
-#hobbies-screen h1 {
-    top: 2vh;
+#skills-background {
+    position: absolute;
+    height: 100%;
+    width: 98%;
+    left: 1%;
+    top: 0;
+    background-color: var(--dark-main);
+    transform: rotate(-5deg);
+    z-index: -1;
+    overflow: hidden;
+    box-shadow: 0 0 10px black inset;
+}
+
+#skills-screen p {
+    left: 5vw;
+    width: 70vw;
+}
+
+#skills-screen ul {
+    font-size: 1.5rem;
+    font-family: 'Fira Code';
+    position: relative;
+    left: 5vw;
+    width: 60vw;
+}
+
+#skills-screen li {
+    list-style: none;
+    display: inline-block;
+    width: 32%;
 }
 
 #hobbies-screen p {
-    top: 5vh;
-    position: relative;
+    top: 15vh;
     left: 5vw;
     width: 50vw;
 }
@@ -276,67 +297,21 @@
 #hobbies-screen img {
     position: absolute;
     top: 25vh;
-    right: -20px;
+    right: 0;
     width: 35vw;
+    border-radius: 1vw 0 0 1vw;
 }
 
-#contact-screen {
+#hobbies-screen {
     background-color: var(--light-main);
     z-index: -1;
     box-shadow: 0 0 15px black;
 }
 
-#contact-screen h1 {
+#hobbies-screen h1 {
     color: var(--accent-color1);
     top: 10vh;
     margin: 0;
-}
-
-#contact-form {
-    position: absolute;
-    top: 25vh;
-    left: 5vw;
-}
-
-#contact-form>* {
-    display: block;
-    position: relative;
-    margin: 20px 5px;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    width: 30vw;
-    border-radius: 15px;
-    border: none;
-}
-
-#name-field, #email-field, #content-field{
-    box-shadow: 0 0 10px -5px black inset;
-}
-
-#contact-form>*:focus {
-    outline-color: var(--accent-color1);
-}
-
-#contact-form #email-field {
-    font-family: 'Fira Code', monospace;
-}
-
-#contact-form #content-field {
-    width: 50vw;
-    height: 20vh;
-    z-index: 5;
-}
-#submit-button {
-    width: 15vw;
-    background-color: var(--accent-color1);
-    color: var(--accent-color2);
-}
-
-#submit-button:hover {
-    background-color: var(--accent-color2);
-    color: var(--accent-color1);
-    cursor: pointer;
 }
 
 @media screen and (max-height: 760px) {
@@ -357,7 +332,6 @@
 
     #name-container h1 {
         font-size: 23vw;
-        text-shadow: 0 0 10px black;
     }
 
     #name-container #first-name {
@@ -402,6 +376,39 @@
         min-width: 50vw;
     }
 
+    #skills-screen {
+        height: 110vh;
+    }
+
+    #skills-screen>* {
+        top: 2vh;
+    }
+
+    #skills-background {
+        width: 100%;
+        transform: rotate(-2deg);
+        left: 0;
+        top: 0;
+    }
+
+    #skills-screen p {
+        width: 90vw;
+    }
+
+    #skills-screen ul {
+        padding: 0;
+        width: 100vw;
+    }
+
+    #soft-skills-list li {
+        display: list-item;
+        margin-left: 10px;
+    }
+
+    #skills-screen li {
+        width: 40%;
+    }
+
     #hobbies-screen img {
         top: 70vh;
         left: 20vw;
@@ -411,15 +418,6 @@
     
     #hobbies-screen p {
         width: 80vw;
-        top: 2vh;
-    }
-
-    #contact-form>* {
-        width: 60vw;
-        margin: 40px 5px;
-    }
-
-    #contact-form #content-field {
-        width: 80vw;
+        top: 10vh;
     }
 }

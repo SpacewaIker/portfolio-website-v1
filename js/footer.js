@@ -84,10 +84,10 @@ class Footer extends HTMLElement {
         <div id="website-column" class="column">
           <h1>${content.website[currentLang]}</h1>
           <ul>
-            <li><a class="sliding-underline" href="/html/index.html">${content.home[currentLang]}</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#intro-screen">${content.aboutme[currentLang]}</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#timeline-screen">${content.timeline[currentLang]}</a></li>
-            <li><a class="sliding-underline" href="/html/index.html#contact-screen">${content.contact[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="./">${content.home[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="./#intro-screen">${content.aboutme[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="./#timeline-screen">${content.timeline[currentLang]}</a></li>
+            <li><a class="sliding-underline" href="./#contact-screen">${content.contact[currentLang]}</a></li>
           </ul>
         </div> 
         <div id="social-column" class="column">
