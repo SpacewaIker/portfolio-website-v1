@@ -109,7 +109,7 @@ class Header extends HTMLElement {
               <i class="fa-brands fa-linkedin-in"></i></a>
             <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">
               <i class="fa-brands fa-github"></i></a>
-            <a class="sliding-underline" id="cv-icon" href="" target="_blank" title="${content.cv[currentLang]}">CV</a>
+            <a class="sliding-underline" id="cv-icon" href="/cv/test.pdf" target="_blank" title="${content.cv[currentLang]}">CV</a>
             <a class="sliding-underline" id="at-icon" href="mailto:${email}" title="${content.email[currentLang]}">@</a>
           </nav>
         </header>

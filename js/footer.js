@@ -99,7 +99,7 @@ class Footer extends HTMLElement {
           <ul>
             <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">Github</a></li>
             <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="${content.linkedin[currentLang]}">LinkedIn</a></li>
-            <li><a class="sliding-underline" href="" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
+            <li><a class="sliding-underline" href="/cv/test.pdf" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
           </ul>
         </div>
         <div id="about-column" class="column">
