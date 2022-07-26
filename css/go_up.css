@@ -1,0 +1,30 @@
+#go-up {
+    position: fixed;
+    background-color: var(--accent-color1);
+    transform: rotate(30deg);
+    width: 100px;
+    height: 150px;
+    bottom: 50px;
+    right: -150px;
+    transition: right 0.5s;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#go-up i {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--accent-color2);
+    transform: rotate(-30deg);
+    font-size: 50px;
+}
+
+#go-up:hover {
+    cursor: pointer;
+}
+
+#go-up.visible {
+    right: -60px;
+}
