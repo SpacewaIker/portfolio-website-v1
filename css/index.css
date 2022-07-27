@@ -7,6 +7,28 @@
     box-shadow: 0 -5px 15px 15px black;
 }
 
+#title-screen-animation-container {
+    position: absolute;
+    top: 22.5vh;
+    left: 1vw;
+    font-family: 'Fira Code';
+    font-size: 1.25rem;
+    color: var(--dark-accent);
+    background-color: #2900290f;
+    padding: 10px;
+    border-radius: 10px;
+    /* width:height ratio * font height * number of chars on longest line */
+    width: calc(0.6 * 1.25rem * 72);
+}
+
+#typing-content {
+    display: none;
+}
+
+.typed-cursor {
+    font-variant-ligatures: none;
+}
+
 #greeting {
     position: absolute;
     color: var(--dark-accent);
@@ -320,7 +342,20 @@
     }
 }
 
+@media screen and (max-height: 850px) {
+    #title-screen-animation-container {
+        font-size: 0.95rem;
+        top: 18vh;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    #title-screen-animation-container {
+        top: 2vw;
+        left: 2vw;
+        width: 90vw;
+    }
+
     #greeting {
         top: calc(-200px - 45vw);
     }

@@ -126,4 +126,11 @@ $(function () {
     nameEvent();
     seekTrack();
     revealTimeline();
+
+    var typed = new Typed('#title-screen-animation', {
+        stringsElement: '#typing-content',
+        startDelay: 1000,
+        typeSpeed: 20,
+        showCursor: true,
+    });
 });
