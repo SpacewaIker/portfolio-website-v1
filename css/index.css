@@ -167,7 +167,6 @@
     position: relative;
     display: flex;
     height: 100vh;
-    margin: 0 20px;
 }
 
 .timeline-item {
@@ -177,6 +176,12 @@
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     color: var(--dark-accent);
+}
+
+.timeline-item.placeholder {
+    color: grey;
+    font-style: italic;
+    width: 30vw;
 }
 
 .top-row, .bottom-row {
@@ -217,36 +222,43 @@
     justify-content: start;
 }
 
-.timeline-background {
-    position: absolute;
-    top: 50vh;
-    left: -60vh;
-    width: 120vh;
-    height: 8vh;
+.timeline-separator {
+    position: relative;
+    height: 110vh;
+    width: 8vh;
+    top: -5vh;
     z-index: -3;
-    transform: rotate(-75deg);
+    transform: rotate(15deg);
     background-color: var(--accent-color1);
+}
+
+.timeline-separator-title {
+    position: relative;
     color: var(--accent-color2);
-    text-align: center;
     font-size: 7vh;
     font-family: 'Raleway';
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    transform: rotate(-90deg);
+    width: 120vh;
+    height: 8vh;
+    text-align: center;
+    top: calc(55vh - 3.5vh);
+    left: calc(-60vh + 3.5vh);
 }
 
 .timeline-courses {
     position: absolute;
     color: var(--dark-accent);
-    /* color: var(--light-main); */
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.25;
     font-family: 'Fira Code';
     letter-spacing: normal;
     text-align: left;
     width: 600px;
     height: calc(6 * 1.5rem * 1.25);
-    transform: rotate(75deg) skewX(-15deg);
-    top: 260px;
-    left: 10px;
+    transform: rotate(-15deg) skewX(-15deg);
+    bottom: calc(10vh + 30px);
+    left: 8vh;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -256,14 +268,6 @@
 .timeline-courses li {
     list-style: none;
     transform: skewX(15deg);
-}
-
-#w22 {
-    min-width: 600px;
-}
-
-#f22, #w23 {
-    min-width: 600px;
 }
 
 #skills-screen {
@@ -336,17 +340,22 @@
     margin: 0;
 }
 
-@media screen and (max-height: 760px) {
-    #intro-screen {
-        height: 150vh;
-    }
-}
-
 @media screen and (max-height: 850px) {
     #title-screen-animation-container {
         font-size: 0.95rem;
         top: 18vh;
     }
+
+    .timeline-item {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-height: 760px) {
+    #intro-screen {
+        height: 150vh;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -398,17 +407,35 @@
         height: 100vh;
     }
 
+    #timeline-title-container {
+        top: 0;
+        height: 20vh;
+    }
+
+    #timeline-title {
+        font-size: 2rem;
+    }
+
     #camera {
         overflow-x: scroll;
         overflow-y: hidden;
     }
 
-    .timeline-item {
-        width: 90vw;
+    #frame {
+        background: linear-gradient(to right, var(--light-main) 98%, #444);
     }
 
-    #f22, #w23 {
-        min-width: 50vw;
+    #progress-bar {
+        position: sticky;
+    }
+
+    .timeline-item {
+        width: 90vw;
+        padding: 0 20px;
+    }
+
+    .timeline-item.placeholder {
+        width: 70vw;
     }
 
     #skills-screen {

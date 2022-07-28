@@ -89,8 +89,10 @@ function revealTimeline() {
     $('.circle').each(function (index, element) {
         if ($(this)[0].getBoundingClientRect().left < 0.5 * $(window).width()) {
             $(this).addClass('filled');
+            $(this).parent().siblings('.bottom-row').children('p').addClass('on-top');
         } else {
             $(this).removeClass('filled');
+            $(this).parent().siblings('.bottom-row').children('p').removeClass('on-top');
         }
     });
 }
@@ -104,23 +106,26 @@ function validate() {
 $(function () {
     /* timelineWidth should be equal to the length of all the content,
         plus the "padding" required to make the first and last items
-        centered. This is equal to 2 * (50vw - 1/2 itemWidth - sectionMargin) */
+        centered. This is equal to 2 * (50vw - 1/2 itemWidth) */
     let timelineWidth = 0;
     $('.timeline-section').each(function (index, element) {
         timelineWidth += $(this).outerWidth(true);
     });
-    timelineWidth += $(window).width() - $($('.timeline-item')[0]).outerWidth(true) -
-        $('.timeline-section').css('margin-left').replace('px', '') * 2;
+    timelineWidth += $(window).width() - $($('.timeline-item')[0]).outerWidth(true);
 
     $('#frame').css('width', timelineWidth + 'px');
     $('#timeline-rail').css('width', timelineWidth + 'px');
 
     window.addEventListener('scroll', nameEvent);
-    window.addEventListener('scroll', revealTimeline);
     if (window.matchMedia('(min-width: 768px)').matches) {
+        // Large screen:
+        window.addEventListener('scroll', revealTimeline);
         window.addEventListener('scroll', seekTrack);
         $('#timeline-screen').css('height',
             ($(window).height() + timelineWidth - $(window).width()) + 'px');
+    } else {
+        // mobile:
+        $('#camera').bind('scroll', revealTimeline);
     }
 
     nameEvent();
