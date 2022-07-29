@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        {
+            let prefLang = 'en';
+            for (let lang of navigator.languages) {
+                if (lang.startsWith('en')) {
+                    prefLang = 'en';
+                    break;
+                } else if (lang.startsWith('fr')) {
+                    prefLang = 'fr';
+                    break;
+                }
+            }
+            window.location.assign('/html/' + prefLang + '/');
+        }
+    </script>
+</head>
+
+</html>
