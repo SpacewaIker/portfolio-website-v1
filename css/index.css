@@ -390,6 +390,10 @@
         right: auto;
     }
 
+    #intro-screen {
+        height: 110vh;
+    }
+
     #picture-container {
         height: 80vw;
         width: 80vw;
@@ -400,7 +404,7 @@
         width: 90vw;
         left: 5vw;
         right: auto;
-        top: 55vh;
+        top: 60vh;
     }
 
     #timeline-screen {
