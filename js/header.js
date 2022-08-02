@@ -1,26 +1,13 @@
+import { email, cvPath, currentLang, switchLang } from './global.js';
+
 /**
  * Define a header to be used on all pages.
  * 
- * !! This element requires an 'email' const to be set.
  */
 class Header extends HTMLElement {
   constructor() {
     super();
 
-    try {
-      email;
-    } catch (e) {
-      console.error('Footer email const is not set!');
-      var email = '';
-    }
-
-    currentLang = $('html').attr('lang');
-    switchToLang = 'NA';
-    if (currentLang === 'fr') {
-      switchToLang = 'en';
-    } else if (currentLang === 'en') {
-      switchToLang = 'fr';
-    }
   }
 
   connectedCallback() {
@@ -67,7 +54,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
         <link rel="stylesheet" href="/css/header.css">
         <header>
-          <div id="menu-title">menu(<div class="sliding-underline" onclick="switchLang()" id="lang">${currentLang}</div>)</div>
+          <div id="menu-title">menu(<div class="sliding-underline" id="lang">${currentLang}</div>)</div>
           <div id="opening-bracket">{</div>
           <nav class="menu-content">
             <a href="./">${content.home[currentLang]}</a>
@@ -80,7 +67,7 @@ class Header extends HTMLElement {
                 <i class="fa-brands fa-linkedin-in"></i></a>
               <a href="https://www.github.com/SpacewaIker" target="_blank">
                 <i class="fa-brands fa-github"></i></a>
-              <a id="cv-icon" href="" target="_blank">CV</a>
+              <a id="cv-icon" href="${cvPath}" target="_blank">CV</a>
               <a id="at-icon" href="mailto:${email}">@</a>
             </div>
           </nav>
@@ -96,7 +83,7 @@ class Header extends HTMLElement {
             <polyline id="header-poly" points="0 0, 1000 0, 1000 600, 0 100"></polyline>
           </svg>
           <nav id="page-links">
-            menu(<div class="sliding-underline" onclick="switchLang()" id="lang">${currentLang}</div>) {
+            menu(<div class="sliding-underline" id="lang">${currentLang}</div>) {
             <a class="sliding-underline" href="./">${content.home[currentLang]}</a>
             <a class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
             <a class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
@@ -109,25 +96,18 @@ class Header extends HTMLElement {
               <i class="fa-brands fa-linkedin-in"></i></a>
             <a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">
               <i class="fa-brands fa-github"></i></a>
-            <a class="sliding-underline" id="cv-icon" href="/cv/test.pdf" target="_blank" title="${content.cv[currentLang]}">CV</a>
+            <a class="sliding-underline" id="cv-icon" href="${cvPath}" target="_blank" title="${content.cv[currentLang]}">CV</a>
             <a class="sliding-underline" id="at-icon" href="mailto:${email}" title="${content.email[currentLang]}">@</a>
           </nav>
         </header>
       `;
     }
+
+    $('#lang').click(switchLang);
   }
 }
 
 customElements.define('header-component', Header);
-
-var currentLang;
-var switchToLang;
-
-function switchLang() {
-  var url = window.location.href;
-  url = url.replace(currentLang, switchToLang);
-  window.location.assign(url);
-}
 
 /**
  * Animation for the header SVG background.

@@ -1,7 +1,8 @@
+import { email, cvPath, currentLang } from './global.js';
+
 /**
  * Define a footer to be used on all pages.
  * 
- * !! This element requires an 'email' const to be set.
  */
 class Footer extends HTMLElement {
   constructor() {
@@ -93,13 +94,13 @@ class Footer extends HTMLElement {
         <div id="social-column" class="column">
           <h1>${content.social[currentLang]}</h1>
           <div id="copy-popup">${content.popup[currentLang]}</div>
-          <p class="sliding-underline" onclick="copyEmail()" title="${content.email[currentLang]}">
+          <p class="sliding-underline" id="copy-email" title="${content.email[currentLang]}">
             Email<br/>${email}
           </p>
           <ul>
             <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">Github</a></li>
             <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="${content.linkedin[currentLang]}">LinkedIn</a></li>
-            <li><a class="sliding-underline" href="/cv/test.pdf" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
+            <li><a class="sliding-underline" href="${cvPath}" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
           </ul>
         </div>
         <div id="about-column" class="column">
@@ -111,6 +112,8 @@ class Footer extends HTMLElement {
         </div>
       </footer>
     `;
+
+    $('#copy-email').click(copyEmail);
   }
 }
 

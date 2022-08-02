@@ -1,0 +1,43 @@
+@import url(./styles.css);
+
+#intro-screen {
+    /* background-color: var(--dark-main); */
+}
+
+#intro-text-container {
+    position: absolute;
+    top: 30vh;
+}
+
+#intro-screen h1 {
+    position: relative;
+    font-family: 'Bree Serif';
+    font-size: 3.5rem;
+}
+
+#intro-screen p {
+    position: relative;
+    left: 5vw;
+    width: 70vw;
+}
+
+@media screen and (max-height: 750px) {
+    #fujitsu-internship {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro-text-container {
+        top: 5vh;
+    }
+
+    #intro-screen p {
+        width: 90vw;
+    }
+
+    #fujitsu-internship {
+        height: 130vh;
+    }
+
+}

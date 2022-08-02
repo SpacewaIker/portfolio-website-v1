@@ -5,20 +5,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thibaut Baguette | Software Engineer</title>
-  <link rel="stylesheet" href="/css/styles.css">
+
+  <title>Experience | Thibaut Baguette | Software Engineer</title>
+
+  <!-- Styles and fonts -->
   <link rel="stylesheet" href="/css/experience.css">
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
-  <script src="/js/header.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script type="module" src="/js/header.js"></script>
+  <script type="module" src="/js/footer.js"></script>
+  <script src="/js/go_up.js"></script>
+  
 </head>
 
 <body>
   <header-component></header-component>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  experience
+  <go-up></go-up>
+
+  <section class="screen" id="intro-screen">
+    <div id="intro-text-container">
+      <h1 class="header">My experience</h1>
+      <p class="paragraph">While experience with projects is important, internship experience teaches not only technical skills but also soft skills crucial for software engineers.</p>
+      <p class="paragraph">Below you will find information about my internships and other forms of experience as part of a team.</p>
+    </div>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen" id="fujitsu-internship">
+    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo">
+    <h1 class="cv-role">GIS Developer Intern</h1>
+    <div class="cv-date">May 2022 - Jul 2022</div>
+    <ul class="cv-keywords">
+      <li>JavaScript</li>
+      <li>Node.js</li>
+      <li>Docker</li>
+      <li>PostgrSQL</li>
+      <li>Proof-of-Concept</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>Successfully developed a proof-of-concept indoor routing web application in JavaScript/Node.js.</li>
+      <li>Connected a front-end web application to a PostgrSQL database running on an Ubuntu Docker container.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      For this internship I was tasked with developing a proof-of-concept for a web application related to indoor routing. During the development, I had to research the available technologies and make decisions as to which technologies were best suited for this project. I also had to adapt to some compatibility issues I encountred and instead opted for Docker containers for the back-end of the application. 
+    </p>
+    <p class="paragraph cv-content">
+      The application was developed in JavaScript with Yarn and Webpack. For the back-end, I used Docker Compose to create a PostgrSQL database, a PostgREST API, and a routing engine that would all three work together. The web application was deployed on an IIS server.
+    </p>
+    <p class="paragraph cv-content">
+      At the end of the internship, the application was fully functional and responded to the clients' requirements. 
+    </p>
+  </section>
+
+  <footer-component></footer-component>
 </body>
 
 </html>
