@@ -4,9 +4,9 @@ const cvPath = '/cv/test.pdf';
 var currentLang = $('html').attr('lang');
 var switchToLang = 'NA';
 if (currentLang === 'fr') {
-    switchToLang = 'en';
+  switchToLang = 'en';
 } else if (currentLang === 'en') {
-    switchToLang = 'fr';
+  switchToLang = 'fr';
 }
 
 function switchLang() {
@@ -15,5 +15,21 @@ function switchLang() {
   window.location.assign(url);
 }
 
+$(function () {
+  $('.cv-image').click(function () {
+    // $(this).toggleClass('focus');
+    if ($(this).hasClass('focus')) {
+      $(this).removeClass('focus');
+      $('#background-blur').remove();
+    } else {
+      $('.cv-image').removeClass('top');
+      $(this).addClass('top');
+      $(this).addClass('focus');
+      var el = document.createElement('div');
+      el.id = 'background-blur';
+      $('body').prepend(el);
+    }
+  })
+})
 
 export { email, cvPath, currentLang, switchLang };

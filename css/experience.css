@@ -1,9 +1,5 @@
 @import url(./styles.css);
 
-#intro-screen {
-    /* background-color: var(--dark-main); */
-}
-
 #intro-text-container {
     position: absolute;
     top: 30vh;
