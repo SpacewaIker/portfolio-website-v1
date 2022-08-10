@@ -9,7 +9,7 @@ header {
     z-index: 2;
 }
 
-.sliding-underline:hover:after, .sliding-underline.active:after {
+header .sliding-underline:hover:after, header .sliding-underline.active:after {
     background-color: var(--accent-color2);
 }
 

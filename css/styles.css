@@ -27,6 +27,11 @@ body {
     color: var(--dark-accent);
 }
 
+.screen.cv {
+    height: fit-content;
+    padding-bottom: 150px;
+}
+
 .header {
     position: relative;
     font-size: 3rem;
@@ -45,7 +50,7 @@ body {
     transition: width 0.5s ease, background 0.5s ease;
 }
 
-.sliding-underline:hover:after {
+.sliding-underline:hover:after, .sliding-underline.active:after {
     width: 100%;
     background: var(--dark-accent);
 }
@@ -147,9 +152,11 @@ ul.cv-summary li:before {
     position: absolute;
     right: 5vw;
     width: 15vw;
+    height: 15vh;
     border-radius: 20px;
     border: 3px solid var(--accent-color1);
-    transition-property: top, width, border-radius, border;
+    object-fit: cover;
+    transition-property: top, width, height, border-radius, border;
     transition-duration: 500ms;
 }
 
@@ -158,15 +165,15 @@ ul.cv-summary li:before {
 }
 
 .cv-image.first {
-    top: 35vh;
+    top: 45vh;
 }
 
 .cv-image.second {
-    top: 50vh;
+    top: 65vh;
 }
 
 .cv-image.third {
-    top: 65vh;
+    top: 85vh;
 }
 
 .cv-image:hover {
@@ -175,9 +182,10 @@ ul.cv-summary li:before {
 
 .cv-image.focus {
     z-index: 4;
-    top: 10vh;
-    right: 5vw;
+    object-fit: contain;
+    top: 5vh;
     width: 90vw;
+    height: 90vh;
     border-radius: 0;
     border: none;
 }
@@ -204,6 +212,7 @@ ul.cv-summary li:before {
     top: -75px;
     fill: var(--accent-color1);
 }
+
 
 @media screen and (max-width: 768px) {
     .header {
