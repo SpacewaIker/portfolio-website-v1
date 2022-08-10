@@ -57,11 +57,11 @@ class Header extends HTMLElement {
           <div id="menu-title">menu(<div class="sliding-underline" id="lang">${currentLang}</div>)</div>
           <div id="opening-bracket">{</div>
           <nav class="menu-content">
-            <a href="./">${content.home[currentLang]}</a>
-            <a href="./projects.html">${content.projects[currentLang]}</a>
-            <a href="./experience.html">${content.experience[currentLang]}</a>
-            <a href="./education.html">${content.education[currentLang]}</a>
-            <a href="./hobbies.html">${content.hobbies[currentLang]}</a>
+            <a id="header-index" class="sliding-underline" href="./">${content.home[currentLang]}</a>
+            <a id="header-project" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a id="header-experience" class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
+            <a id="header-education" class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
+            <a id="header-hobbies" class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
             <div>
               <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
                 <i class="fa-brands fa-linkedin-in"></i></a>
@@ -84,11 +84,11 @@ class Header extends HTMLElement {
           </svg>
           <nav id="page-links">
             menu(<div class="sliding-underline" id="lang">${currentLang}</div>) {
-            <a class="sliding-underline" href="./">${content.home[currentLang]}</a>
-            <a class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
-            <a class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
-            <a class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
-            <a class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
+            <a id="header-index" class="sliding-underline" href="./">${content.home[currentLang]}</a>
+            <a id="header-projects" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a id="header-experience" class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
+            <a id="header-education" class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
+            <a id="header-hobbies" class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
             }
           </nav>
           <nav id="header-icons">
@@ -178,4 +178,17 @@ $(function () {
     window.addEventListener('scroll', updateHeaderSize);
     updateHeaderSize();
   }
+
+  // set active class to the current page's link
+  var currentPage = 'index';
+  if (window.location.pathname.includes('projects')) {
+    currentPage = 'projects';
+  } else if (window.location.pathname.includes('experience')) {
+    currentPage = 'experience';
+  } else if (window.location.pathname.includes('education')) {
+    currentPage = 'education';
+  } else if (window.location.pathname.includes('hobbies')) {
+    currentPage = 'hobbies';
+  }
+  $('#header-' + currentPage).addClass('active');
 });

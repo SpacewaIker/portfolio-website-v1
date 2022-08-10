@@ -1,0 +1,26 @@
+@import url(./styles.css);
+
+#intro-text-container {
+    position: absolute;
+    top: 30vh;
+}
+
+#intro-screen h1 {
+    position: relative;
+    font-family: 'Bree Serif';
+    font-size: 3.5rem;
+}
+
+#intro-screen p {
+    position: relative;
+    left: 5vw;
+    width: 70vw;
+}
+
+#portfolio-website .cv-logo {
+    width: 5vw;
+}
+
+#devpost-link {
+    left: 120px;
+}

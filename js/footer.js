@@ -106,7 +106,7 @@ class Footer extends HTMLElement {
         <div id="about-column" class="column">
           <h1>${content.about[currentLang]}</h1>
           <p>${content.credits[currentLang]}<br/>Thibaut Baguette</p>
-          <p><a class="sliding-underline" href="https://www.github.com/SpacewaIker/portfolio-website" target="_blank">
+          <p><a class="sliding-underline" href="https://www.github.com/SpacewaIker/spacewaiker.github.io" target="_blank">
             ${content.repo[currentLang]}
           </a></p>
         </div>
