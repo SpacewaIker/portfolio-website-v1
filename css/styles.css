@@ -24,10 +24,6 @@ a {
     color: var(--accent-color1);
 }
 
-a:hover {
-    color: var(--dark-accent);
-}
-
 .screen {
     position: relative;
     width: 100%;
@@ -88,7 +84,7 @@ a:hover {
     font-family: 'Raleway';
     width: fit-content;
     margin: 1.25em 0 0.25em 0;
-    border-bottom: 3px solid;
+    text-decoration: underline;
     display: inline-block;
 }
 
@@ -232,6 +228,10 @@ ul.cv-summary li:before {
         line-height: 1.25;
     }
 
+    .screen.cv {
+        padding-bottom: 200px;
+    }
+
     .cv-date {
         position: relative;
         transform: none;
@@ -244,6 +244,7 @@ ul.cv-summary li:before {
     }
 
     .cv-logo {
+        display: block;
         position: relative;
         top: 0;
         left: 5vw;
@@ -252,9 +253,18 @@ ul.cv-summary li:before {
         width: 40vw;
     }
 
+    .cv-github-link {
+        left: 40px;
+    }
+
     .cv-role {
         font-size: 2rem;
         margin-top: 0.25em;
+        max-width: 90vw;
+    }
+
+    .cv-role.no-logo {
+        margin-top: 1.25em;
     }
 
     ul.cv-keywords {
@@ -273,7 +283,28 @@ ul.cv-summary li:before {
         top: 0;
     }
 
+    .cv-content.with-image {
+        width: 90vw;
+    }
+
     .separator {
         top: -100px;
+    }
+
+    .cv-image {
+        position: relative;
+        left: 15vw;
+        width: 70vw;
+        height: 20vh;
+        margin: 10px 0;
+    }
+
+    .cv-image.first, .cv-image.second, .cv-image.third {
+        top: 0;
+    }
+
+    .cv-image.focus {
+        top: 0;
+        left: 5vw;
     }
 }

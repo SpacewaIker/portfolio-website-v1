@@ -19,7 +19,6 @@ $(function () {
   $('.cv-image').attr('title', 'Click to Enlarge Image!');
 
   $('.cv-image').click(function () {
-    // $(this).toggleClass('focus');
     if ($(this).hasClass('focus')) {
       $(this).removeClass('focus');
       $('#background-blur').remove();
