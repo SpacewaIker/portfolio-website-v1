@@ -24,3 +24,13 @@
 #devpost-link {
     left: 120px;
 }
+
+@media screen and (max-width: 768px) {
+    #intro-text-container {
+        top: 3vh;
+    }
+
+    #intro-screen p {
+        width: 90vw;
+    }
+}

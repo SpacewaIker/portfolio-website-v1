@@ -5,20 +5,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thibaut Baguette | Software Engineer</title>
-  <link rel="stylesheet" href="/css/styles.css">
+
+  <title>Education | Thibaut Baguette | Software Engineer</title>
+
+  <!-- Styles and fonts -->
   <link rel="stylesheet" href="/css/education.css">
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
-  <script src="/js/header.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script type="module" src="/js/header.js"></script>
+  <script type="module" src="/js/footer.js"></script>
+  <script src="/js/go_up.js"></script>
 </head>
 
 <body>
   <header-component></header-component>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  education
+  <go-up></go-up>
+
+  <section class="screen" id="intro-screen">
+    <div id="intro-text-container">
+      <h1 class="header">My education</h1>
+      <p class="paragraph">Learning through projects is arguably the best way to learn programming; however, solely learning through projects will leave you without the theoretical basis on which programming knowledge thrives. Indeed, I believe that learning about core topics in mathematics, engineering, and computer science will allow a software engineer to understand <i>why</i> something works or <i>how</i> to make it work, faster, making them better at what they do.</p>
+      <p class="paragraph">You will find information about my educational curriculum below.</p>
+    </div>
+  </section>
+
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv">
+    <img class="cv-logo" src="/img/McGill_logo.png" alt="McGill University Logo">
+    <h1 class="cv-role">B.Eng. Software Engineering Co-op</h1> 
+    <div class="cv-date">2021 - 2025</div>
+    <ul class="cv-summary">
+      <li>CGPA: 3.93/4.0</li>
+      <li>Selected for the Dean's Honour List for the year 2021-2022.</li>
+      <li>Received the Les Vadasz Award in Engineering and a Faculty of Engineering Scholarship.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      It seems that every time I progress in my education curriculum, I find myself enjoying more the position I'm in. When I went from high school to college/CEGEP, I enjoyed the additional freedom and the more advanced topics I was learning about. And when I got to university, I knew I was on the right track; what was previously a hobby of mine that I used to get away from the stress of school was now the main focus of my studies, and was what professors were teaching me!
+    </p>
+    <p class="paragraph cv-content">
+      In my first semester, I enrolled in the McGill Artificial Intelligence Society's "MAIS 202" bootcamp, an accelerated introduction to AI and ML. You can learn more about my learning experience below.
+    </p>
+    <p class="paragraph cv-content">
+      Thankfully, McGill will be back to full in-person classes and activities this next semester, and I will be able to experience more of the student life. 
+    </p>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv">
+    <img class="cv-logo" src="/img/mais_logo.webp" alt="McGill Artificial Intelligence Society Logo">
+    <h1 class="cv-role">MAIS 202 Bootcamp</h1>
+    <div class="cv-date">Oct 2021 - Nov 2021</div>
+    <ul class="cv-summary">
+      <li>Full course load during two months during the Fall 2021 semester.</li> 
+      <li>Learned about various machine learning algorithms.</li>
+      <li>Created an AI-based webapp game for the final assignment.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      The McGill Artificial Intelligence Society is a student-lead community of AI enthusiasts with the goal of learning and teaching, fostering the AI community, and connecting students with the industry. Their "MAIS 202" bootcamp is a two-month accelerated introduction to AI and ML with assignments and classes worth a full course load.
+    </p>
+    <p class="paragraph cv-content">
+      The final assignment for this bootcamp was to build an AI-based project, that we completed in pairs. The project that I worked on is described in the <a href="./projects.html#airdraw-project">projects page</a>.
+    </p>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv">
+    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="CEGEP Champlain St.Lawrence Logo">
+    <h1 class="cv-role">DEC Pure & Applied Science</h1>
+    <div class="cv-date">2019 - 2021</div>
+    <ul class="cv-summary">
+      <li>Selected for the Honour List for the semesters of Winter 2020, Fall 2020, and Winter 2021.</li>
+      <li>Participated in the Canadian Open Mathematical Challenge and received Performance with Honours.</li>
+      <li>Tutored other students in Mathematics, Physics, and Chemistry.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      During my two years in CEGEP, I focused mainly on my studies, even though I began to learn programming on the side. This was my first time going to an English-speaking school as a native French speaker. As such, there was a bit of getting used to, but I was quickly comfortable with learning in English. 
+    </p>
+    <p class="paragraph cv-content">
+      In my second year, I began to do some tutoring in mathematics, physics, and chemistry. I also participated in the Canadian Open Mathematical Challenge and received Performance with Honours.
+    </p>
+    <p class="paragraph cv-content">
+      At the middle of my second semester, the first covid quarantining started. From then, the rest of my college studies were remote. Once teachers and students got used to remote learning/teaching, I used this opportunity to improve my autodidactic skills and my autonomy. 
+    </p>
+  </section>
+
+  <footer-component></footer-component>
 </body>
 
 </html>
