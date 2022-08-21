@@ -105,7 +105,7 @@ header a {
 
     header.open {
         width: 300px;
-        height: 350px;
+        height: 310px;
         border-radius: 25px;
     }
 
@@ -134,7 +134,7 @@ header a {
     }
 
     #closing-bracket.open {
-        top: 260px;
+        top: 220px;
         left: 20px;
     }
 
@@ -149,7 +149,7 @@ header a {
     }
 
     #comment.open {
-        top: 300px;
+        top: 260px;
         left: 20px;
         opacity: 1;
     }
@@ -190,7 +190,7 @@ header a {
     .menu-content div {
         padding: 0;
         position: relative;
-        top: 40px;
+        top: 30px;
         left: 10px;
     }
 

@@ -28,10 +28,6 @@ class Header extends HTMLElement {
         en: 'Education();',
         fr: 'Éducation();'
       },
-      hobbies: {
-        en: 'Hobbies();',
-        fr: 'Loisirs();'
-      },
       linkedin: {
         en: 'Connect with me!',
         fr: 'Connecter avec moi!'
@@ -58,10 +54,9 @@ class Header extends HTMLElement {
           <div id="opening-bracket">{</div>
           <nav class="menu-content">
             <a id="header-index" class="sliding-underline" href="./">${content.home[currentLang]}</a>
-            <a id="header-project" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a id="header-projects" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
             <a id="header-experience" class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
             <a id="header-education" class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
-            <a id="header-hobbies" class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
             <div>
               <a href="https://www.linkedin.com/in/thibaut-baguette" target="_blank">
                 <i class="fa-brands fa-linkedin-in"></i></a>
@@ -85,10 +80,9 @@ class Header extends HTMLElement {
           <nav id="page-links">
             menu(<div class="sliding-underline" id="lang">${currentLang}</div>) {
             <a id="header-index" class="sliding-underline" href="./">${content.home[currentLang]}</a>
-            <a id="header-projects" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a id="header-projectss" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
             <a id="header-experience" class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
             <a id="header-education" class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
-            <a id="header-hobbies" class="sliding-underline" href="./hobbies.html">${content.hobbies[currentLang]}</a>
             }
           </nav>
           <nav id="header-icons">
