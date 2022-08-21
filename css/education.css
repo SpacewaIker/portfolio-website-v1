@@ -1,0 +1,28 @@
+@import url(./styles.css);
+
+#intro-text-container {
+    position: absolute;
+    top: 30vh;
+}
+
+#intro-screen h1 {
+    position: relative;
+    font-family: 'Bree Serif';
+    font-size: 3.5rem;
+}
+
+#intro-screen p {
+    position: relative;
+    left: 5vw;
+    width: 70vw;
+}
+
+@media screen and (max-width: 768px) {
+    #intro-text-container {
+        top: 3vh;
+    }
+
+    #intro-screen p {
+        width: 90vw;
+    }
+}
