@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 768px) {
     #intro-text-container {
-        top: 5vh;
+        top: 3vh;
     }
 
     #intro-screen p {

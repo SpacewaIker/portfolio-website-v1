@@ -20,6 +20,14 @@ body {
     font-family: 'Bahnschrift';
 }
 
+a {
+    color: var(--accent-color1);
+}
+
+a:hover {
+    color: var(--dark-accent);
+}
+
 .screen {
     position: relative;
     width: 100%;
@@ -68,7 +76,7 @@ body {
     width: 100vh;
     text-align: center;
     left: calc(-50vh + 2rem);
-    top: 50vh;
+    top: 40vh;
     font-size: 2rem;
     font-family: 'Fira Code';
 }
@@ -239,6 +247,7 @@ ul.cv-summary li:before {
         position: relative;
         top: 0;
         left: 5vw;
+        margin-top: 25px;
         margin-bottom: 0;
         width: 40vw;
     }
