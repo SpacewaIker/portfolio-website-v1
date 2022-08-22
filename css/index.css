@@ -146,6 +146,15 @@
     justify-content: center;
 }
 
+#timeline-screen a {
+    text-decoration: none;
+    color: var(--dark-accent);
+}
+
+#timeline-screen i {
+    font-size: 0.75em;
+}
+
 #timeline-rail {
     height: 3px;
     position: absolute;

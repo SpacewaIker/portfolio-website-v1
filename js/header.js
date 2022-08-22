@@ -80,7 +80,7 @@ class Header extends HTMLElement {
           <nav id="page-links">
             menu(<div class="sliding-underline" id="lang">${currentLang}</div>) {
             <a id="header-index" class="sliding-underline" href="./">${content.home[currentLang]}</a>
-            <a id="header-projectss" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
+            <a id="header-projects" class="sliding-underline" href="./projects.html">${content.projects[currentLang]}</a>
             <a id="header-experience" class="sliding-underline" href="./experience.html">${content.experience[currentLang]}</a>
             <a id="header-education" class="sliding-underline" href="./education.html">${content.education[currentLang]}</a>
             }
