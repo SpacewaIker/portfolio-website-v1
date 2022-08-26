@@ -1,5 +1,4 @@
 const email = 'thibaut.baguette@mail.mcgill.ca';
-const cvPath = '/cv/test.pdf';
 
 var currentLang = $('html').attr('lang');
 var switchToLang = 'NA';
@@ -7,6 +6,11 @@ if (currentLang === 'fr') {
   switchToLang = 'en';
 } else if (currentLang === 'en') {
   switchToLang = 'fr';
+}
+
+var cvPath = `/cv/Thibaut Baguette's resume.pdf`;
+if (currentLang === 'fr') {
+  cvPath = `/cv/CV de Thibaut Baguette.pdf`;
 }
 
 function switchLang() {
