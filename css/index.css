@@ -279,6 +279,10 @@
     transform: skewX(15deg);
 }
 
+#w22 .timeline-item {
+    width: 40vw;
+}
+
 #skills-screen {
     position: relative;
     background-color: var(--accent-color1);
@@ -449,6 +453,14 @@
 
     .timeline-item.placeholder {
         width: 70vw;
+    }
+
+    .timeline-separator {
+        margin-left: 40px;
+    }
+
+    #w22 .timeline-item {
+        width: 100vw;
     }
 
     #skills-screen {

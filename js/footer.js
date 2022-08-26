@@ -34,10 +34,6 @@ class Footer extends HTMLElement {
         en: 'Timeline',
         fr: 'Chronologie'
       },
-      contact: {
-        en: 'Contact',
-        fr: 'Contact'
-      },
       social: {
         en: 'Social',
         fr: 'Social'
@@ -88,7 +84,6 @@ class Footer extends HTMLElement {
             <li><a class="sliding-underline" href="./">${content.home[currentLang]}</a></li>
             <li><a class="sliding-underline" href="./#intro-screen">${content.aboutme[currentLang]}</a></li>
             <li><a class="sliding-underline" href="./#timeline-screen">${content.timeline[currentLang]}</a></li>
-            <li><a class="sliding-underline" href="./#contact-screen">${content.contact[currentLang]}</a></li>
           </ul>
         </div> 
         <div id="social-column" class="column">

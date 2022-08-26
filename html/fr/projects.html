@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projets | Thibaut Baguette | Ingénieur Logiciel</title>
+
+  <!-- Styles and fonts -->
+  <link rel="stylesheet" href="/css/projects.css">
+  <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script type="module" src="/js/header.js"></script>
+  <script type="module" src="/js/footer.js"></script>
+  <script src="/js/go_up.js"></script>
+</head>
+
+<body>
+  <header-component></header-component>
+  <go-up></go-up>
+  
+  <section class="screen" id="intro-screen">
+    <div id="intro-text-container">
+      <h1 class="header">Mes projets</h1>
+      <p class="paragraph">Une des meilleures façons d'apprendre la programmation est en pratiquant et en travaillant sur des projets. Que ce soit seul ou en équipe, pour un cours ou un projet personnel, essayer de créer quelque chose est crucial pour concrétizer les connaissances théoriques.</p>
+      <p class="paragraph">Mes plus gros projets sont présentés ci-dessous, et la majorité sont aussi présentés sur GitHub. Faites défiler pour les découvrir!</p>
+    </div>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="portfolio-website">
+    <img class="cv-logo" src="/favicon.ico" alt="Website logo">
+    <h1 class="cv-role">Site web portfolio</h1>
+    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/spacewaiker.github.io/" target="_blank">
+      <i class="fa-brands fa-github"></i></a>
+    <div class="cv-date">Mai 2022 - Août 2022</div>
+    <ul class="cv-keywords">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>JQuery</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A designé un site web portfolio pour développeur avec Figma.</li>
+      <li>A créé un site web statique adaptatif avec du HTML, du CSS, et JavaScript.</li>
+      <li>A publié un site web bilingue avec GitHub Pages et Google Domains.</li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Pendant l'été j'ai designé et créé ce site même. J'ai suivi des cours de HTML, CSS, JavaScript et JQuery pour démarrer et puis j'ai appris le reste en cours de route.
+    </p>
+    <p class="paragraph cv-content with-image">
+      J'ai d'abord designé le site avec Figma et je me suis décidé sur un design qui était intéractif et amusant, tout en étant simple et fonctionnel. J'ai aussi choisi une palette de couleurs, les polices que j'utiliserais, et quel contenu j'y incluerait.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Après, j'ai commencé à prototyper certaines parties du site, telles le bouton de menu sur mobile, la ligne du temps qui défile horizontalement, et l'animation du titre. Ceci m'a permis de me familiariser avec JavaScript, ainsi que de commencer à créer des parties du site web. Par la suite, j'ai commencé à créer le site complet.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Avec beaucoup de créativité, de resolution de problèmes et de dédication, j'ai pu finir le site web avant le début du semestre d'automne 2022, et avant le début de la période d'application de stages.
+    </p>
+    <img class="cv-image first" src="/img/website_screenshot_desktop.png" alt="A screenshot of the desktop website">
+    <img id="website-screenshot-mobile" class="cv-image second" src="/img/website_screenshot_mobile.jpg" alt="A screenshot of the mobile website"> 
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="divesafe-project">
+    <img class="cv-logo" src="/img/DiveSafe_logo.png" alt="DiveSafe logo">
+    <h1 class="cv-role">DiveSafe</h1>
+    <div class="cv-date">Jan 2022 - Avr 2022</div>
+    <ul class="cv-keywords">
+      <li>Java</li>
+      <li>MVC</li>
+      <li>UML</li>
+      <li>TDD</li>
+      <li>BDD</li>
+      <li>Gherkin</li>
+      <li>JavaFX</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A dévelopé une application avec interface graphique permettant de gérer les membres et les excursions de plongée, ainsi que la location d'équipement.</li>
+      <li>A collaboré avec cinq autres développeurs du design de l'architecture au développement et à la phase de tests.</li>
+      <li>A utilisé le motif d'architecture modèle-vue-controlleur et a développé l'application en « test-driven-development » ainsi qu'en « behavior-driven-development ».</li>
+      <li>A designé et créé un logo pour l'application.</li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      L'application DiveSafe est une application de gestion pour une companie de plongée fictive. Elle permet de gérer les membres du club, les guides de plongée et leur horaire, les excursions des membres, et la location d'équipement.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Le but principal de ce projet était d'expérimenter avec des motifs de design et des styles de développement populaires. Le motif d'architecture choisi était donc le modèle-vue-controlleur. Le modèle a été construit à partir d'un diagramme UML, et les classes Java ont été générées automatiquement à partir d'une description du modèle grâce à l'outil Umple. Certaines parties du controlleur ont été développées en « test-driven-development », et d'autres en « behavior-driven-development ». Pour les tests unitaires, nous avons utilisé JUnit, alors que pour les tests d'intégration, nous avons utilisé Cucumber et Gherkin. Finalement, nous avons utilisé JavaFX pour créer l'interface graphique.
+    </p>
+    <p class="paragraph cv-content with-image">
+      J'ai aussi designé et créé le logo de l'application visible ci-dessus!
+    </p>
+    <img class="cv-image first" src="/img/divesafe_screenshot.png" alt="A screenshot of the DiveSafe app.">
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="airdraw-project">
+    <h1 class="cv-role no-logo">AirDraw</h1>
+    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/AirDraw/" target="_blank">
+      <i class="fa-brands fa-github"></i></a>
+    <a id="devpost-link" class="sliding-underline cv-github-link" href="https://devpost.com/software/air-drawing" target="_blank">
+      <i class="fa-solid fa-circle-info"></i></a>
+    <div class="cv-date">Oct 2021 - Nov 2021</div>
+    <ul class="cv-keywords">
+      <li>Python</li>
+      <li>SciKit Learn</li>
+      <li>MediaPipe</li>
+      <li>IA/ML</li>
+      <li>Vision par ordinateur</li>
+      <li>StreamLit</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A créé une application web basée sur l'intelligence artificielle en Python.</li>
+      <li>A créé, entraîné, et sauvegardé le modèle de machine learning utilisé pour la reconaissance des signes de mains.</li>
+      <li>A amélioré la performance du modèle en utilisant des techniques d'amélioration de données.</li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Ce projet était le dernier du cours d'IA « MAIS 202 » de la société d'intelligence artificielle de McGill. Le but du projet était d'utiliser tout ce que nous avions appris dans le cours pour créer une application basée sur l'intelligence artificielle. Mon coéquipier et moi étions intéressés par la vision par ordinateur et avons donc décidé de créer une application où l'utilisateur dessinerait des formes en bougeant sa main et en faisant des signes devant une caméra.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Nous avons géré le développement complet de l'application, de la collection des données d'entraînement au choix d'algorithme et la création et l'entraînement du modèle. Nous avons décidé d'opter pour un algorithme d'arbre de décision pour la classificiation des signes de main. Nous avons utilisé la librairie Hands de MediaPipe pour extraire la position des mains du flux vidéo. Pour l'application web nous avons utilisé StreamLit et PyVirtualCam puisque ces librairies étaient simples et correspondaient parfaitement à nos besoins.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Puisqu'il s'agissait d'un projet d'équipe, j'ai pu développer mes compétences de travail d'équipe. Notament, j'ai du démontrer de bonnes compétences de communication et de gestion du temps à cause de problèmes que j'ai rencontrés avec mon coéquipier. Le code pour l'entraînement du modèle ainsi qu'une preuve de concept sont disponibles sur le dépot GitHub. Une page DevPost a aussi été créée pour le projet.
+    </p>
+    <img class="cv-image first" src="/img/airdraw_screenshot.png" alt="A screenshot of the AirDraw project.">
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="pong-project">
+    <h1 class="cv-role no-logo">Pong</h1>
+    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/Pong" target="_blank">
+      <i class="fa-brands fa-github"></i></a>
+    <div class="cv-date">Oct 2021 - Dec 2021</div>
+    <ul class="cv-keywords">
+      <li>Java</li>
+      <li>Développement de jeux vidéos</li>
+      <li>Simulation de physique</li>
+      <li>Programmation oritentée objet</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A recréé le jeu de Pong en Java avec une simulation de physique pour le mouvement de la balle.</li>
+      <li>Le jeu inclut des options telles la difficulté de l'adversaire, la vitesse de la simulation, et les couleurs de la balle et des raquettes.</li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Pour ce projet, j'ai recréé le jeu classique de Pong en Java. Ceci était mon premier peojet en Java et une introduction plus formelle à la programmation orientée objet. Le jeu a donc été développé en premier lieu avec un style fonctionnel/impératif et a été plus tard converti en un style orienté objet. L'orienté objet permettait un maintien du code plus facile, ainsi que des fonctionalités additionelles telles plusieurs simulations de balles avec du multithreading.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Le jeu inclut de nombreuses fonctionnalités : un systeme de pointage avec des joueurs que l'on peut renommer, des options de couleurs pour la balle et les raquettes, des options de jeux et des raccourcis clavier pour des actions comme récommencer, pauser ou quitter la partie.
+    </p>
+    <img class="cv-image first" src="/img/pong_screenshot.png" alt="A screenshot of the Pong project.">
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="snake-project">
+    <h1 class="cv-role no-logo">Snake</h1>
+    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/Snake" target="_blank">
+      <i class="fa-brands fa-github"></i></a>
+    <div class="cv-date">Jan 2021</div>
+    <ul class="cv-keywords">
+      <li>Python</li>
+      <li>PyGame</li>
+      <li>Développement de jeux vidéos</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A recréé le jeu Snake avec Python et PyGame.</li>
+      <li>Inclut des éléments sonores et plusieurs thèmes de couleurs pour le serpent.</li>
+      <li>Fonctionnalité de « high score ».</li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Un de mes plus gros projets en Python a été de recréer le jeu Snake avec PyGame. Le jeu inclut des effets sonores quand le serpent mange un fruit ou quand il entre en collision. Le jeu inclut aussi une fonctionnalité de « high score » et plusieurs vitesses de serpent. Le serpent avait aussi plusieurs thèmes de couleurs.
+    </p>
+    <img class="cv-image first" src="/img/snake_screenshot.png" alt="A screenshot of the Snake project.">
+  </section>
+
+  <footer-component></footer-component>
+</body>
+
+</html>

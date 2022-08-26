@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Expérience | Thibaut Baguette | Ingénieur Logiciel</title>
+
+  <!-- Styles and fonts -->
+  <link rel="stylesheet" href="/css/experience.css">
+  <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script type="module" src="/js/header.js"></script>
+  <script type="module" src="/js/footer.js"></script>
+  <script src="/js/go_up.js"></script>
+  
+</head>
+
+<body>
+  <header-component></header-component>
+  <go-up></go-up>
+
+  <section class="screen" id="intro-screen">
+    <div id="intro-text-container">
+      <h1 class="header">Mon expérience</h1>
+      <p class="paragraph">Bien que l'expérience avec des projets est importante, de l'expérience avec des stages permet d'apprendre non seulement des compétences techniques mais aussi des compétences générales cruciales pour les ingénieurs logiciels.</p>
+      <p class="paragraph">Ci-dessous vous trouverez plus d'information à propos de mes stages et autres formes d'expéience en tant que membre d'équipes.</p>
+    </div>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="fujitsu-internship">
+    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo">
+    <h1 class="cv-role">Stagiaire en développement géomatique</h1>
+    <div class="cv-date">Mai 2022 - Juil 2022</div>
+    <ul class="cv-keywords">
+      <li>JavaScript</li>
+      <li>Node.js</li>
+      <li>Docker</li>
+      <li>PostgreSQL</li>
+      <li>Preuve de concept</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A développé avec succès une preuve de concept pour une application web de routage en intérieur avec JavaScript/Node.js.</li>
+      <li>A connecté une application web front-end avec une base de données PostgreSQL roulant sur un container Docker Ubuntu.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      Pour ce stage, j'ai été chargé de développer une preuve de concept pour une application web liée au routage en intérieur. Pendant le développement, j'ai du rechercher les technologies possibles et faire des décisions sur quelles technologies seraient les plus adaptées au projet. J'ai aussi du m'adapter à cause de problèmes de compatibilité que j'ai rencontré ce qui m'a poussé à utiliser des containers Docker pour le back-end de l'application.
+    </p>
+    <p class="paragraph cv-content">
+      L'application a été développée en JavaScript avec Yarn et Webpack. Pour le back-end, J'ai utilisé Docker Compose pour créer une base de données PostgreSQL, un API PostgREST et un engin de routage qui travailleraient tous les trois ensemble. L'appliation web a été deployée sur un serveur IIS.
+    </p>
+    <p class="paragraph cv-content">
+      À la fin du stage, l'application était totalement fonctionelle et répondait aux exigences du client.
+    </p>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="tutoring">
+    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="St. Lawrence College logo">
+    <h1 class="cv-role">Tutorat</h1>
+    <div class="cv-date">Semestre d'automne 2020</div>
+    <ul class="cv-keywords">
+      <li>Enseignement</li>
+      <li>Mathématiques</li>
+      <li>Physique</li>
+      <li>Chimie</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>A fait du tutorat pour d'autres élèves du cégep en mathématiques, physique et chimie.</li>
+    </ul>
+    <p class="paragraph cv-content">
+      Au début de ma deuxième année de cégep, j'ai été contacté en tant que tuteur potentiel pour les cours dans lesquels je réussissais le mieux, soit les mathématiques, la physique et la chimie. Vu que j'apprécie aider les autres à apprendre et faire comprendre les autres, j'ai commencé à faire du tutorat.
+    </p>
+    <p class="paragraph cv-content">
+      Puisque c'était en automne 2020, les confinement liés à la covid étaient en place et j'ai du faire du tutorat via videoconférence. Cela à légèrement compliqué la tâche, mais j'ai pu utiliser les outils à ma disposition pour tirer le meilleur parti de cette situation et enseinger du mieux que je pouvais!
+    </p>
+  </section>
+
+  <footer-component></footer-component>
+</body>
+
+</html>

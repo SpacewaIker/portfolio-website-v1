@@ -25,6 +25,10 @@
     left: 120px;
 }
 
+#snake-project .cv-image.first {
+    top: 30vh;
+}
+
 @media screen and (max-width: 768px) {
     #intro-text-container {
         top: 3vh;
