@@ -508,3 +508,33 @@
         top: 10vh;
     }
 }
+
+@media screen and (max-width: 400px) {
+    #greeting {
+        font-size: 3rem;
+    }
+
+    #intro-screen {
+        height: 120vh;
+    }
+
+    #timeline-screen .bottom-row {
+        font-size: 1.3rem;
+    }
+
+    .timeline-courses {
+        font-size: 1rem;
+    }
+
+    #skills-screen {
+        height: 120vh;
+    }
+
+    #skills-screen ul {
+        font-size: 1.3rem;
+    }
+
+    #hobbies-screen {
+        height: 110vh;
+    }
+}

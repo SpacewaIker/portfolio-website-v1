@@ -308,3 +308,9 @@ ul.cv-summary li:before {
         left: 5vw;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .paragraph {
+        font-size: 1.3rem;
+    }
+}

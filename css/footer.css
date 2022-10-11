@@ -97,3 +97,9 @@ footer .sliding-underline:hover:after {
         top: 270px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    #about-column p {
+        max-width: 75vw;
+    }
+}

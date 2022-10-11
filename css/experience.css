@@ -17,6 +17,10 @@
     width: 70vw;
 }
 
+#mcgill-robotics .cv-logo {
+    width: 10vw;
+}
+
 @media screen and (max-height: 750px) {
     #fujitsu-internship {
         height: 120vh;
