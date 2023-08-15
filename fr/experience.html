@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Expérience | Thibaut Baguette | Ingénieur Logiciel</title>
+  <title>Expérience | Thibaut Baguette | Développeur Logiciel</title>
 
   <!-- Styles and fonts -->
-  <link rel="stylesheet" href="/css/experience.css">
+  <link rel="stylesheet" href="/css/experience.css" />
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="module" src="/js/header.js"></script>
   <script type="module" src="/js/footer.js"></script>
   <script src="/js/go_up.js"></script>
-  
 </head>
 
 <body>
@@ -29,8 +27,16 @@
   <section class="screen" id="intro-screen">
     <div id="intro-text-container">
       <h1 class="header">Mon expérience</h1>
-      <p class="paragraph">Bien que l'expérience avec des projets est importante, de l'expérience avec des stages permet d'apprendre non seulement des compétences techniques mais aussi des compétences générales cruciales pour les ingénieurs logiciels.</p>
-      <p class="paragraph">Ci-dessous vous trouverez plus d'information à propos de mes stages et autres formes d'expéience en tant que membre d'équipes.</p>
+      <p class="paragraph">
+        Bien que l'expérience avec des projets est importante, de l'expérience
+        avec des stages permet d'apprendre non seulement des compétences
+        techniques mais aussi des compétences générales cruciales pour les
+        ingénieurs logiciels.
+      </p>
+      <p class="paragraph">
+        Ci-dessous vous trouverez plus d'information à propos de mes stages et
+        autres formes d'expéience en tant que membre d'équipes.
+      </p>
     </div>
   </section>
 
@@ -40,10 +46,71 @@
     </svg>
   </div>
 
+  <section class="screen cv" id="rssl-internship">
+    <img class="cv-logo" src="/img/rssl-logo-r-white.png" alt="Reliable Silicon Systems Lab logo" />
+    <h1 class="cv-role">Assistant de recherche en machine learning</h1>
+    <div class="cv-date">Mai 2023 - juil 2023</div>
+    <ul class="cv-keywords">
+      <li>Python</li>
+      <li>Tensorflow</li>
+      <li>Computer Vision</li>
+      <li>Machine Learning</li>
+      <li>C++</li>
+      <li>Recherche académique</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>
+        A implémenté des modèles de computer vision d'articles publiés en
+        Python avec Tensorflow.
+      </li>
+      <li>
+        A développé une application en C++ utilisant un modèle de computer
+        vision pour traiter un flux vidéo en temps réel.
+      </li>
+      <li>
+        A traité des réseaux quantifiés en utilisant des outils spécialisés
+        pour l'utilisation sur une carte de développement.
+      </li>
+      <li>
+        A configuré une carte de développement pour des utilisations de
+        recherche et développement, incluant l'installation de l'OS et la
+        construction des pilotes.
+      </li>
+    </ul>
+    <p class="paragraph cv-content">
+      Pour mon deuxième stage, j'ai eu la chance de travailer en tant
+      qu'assistant de recherche au <i>Reliable Silicon Systems Lab</i> à
+      l'université McGill. Ma tache était de configurer une carte de
+      développement pour le machine learning et de trouver comment exécuter un
+      modèle de machine learning dessus. La carte de développement était un
+      Raspberry Pi avec un module de caméra doté d'une puce d'accélération
+      matérielle pour les tâches de machine learning.
+    </p>
+    <p class="paragraph cv-content">
+      Pendant le stage, j'ai implémenté plusieurs modèles de computer vision
+      provenant d'articles publiés, tels que LeNet et PortraitNet, en
+      utulisant Tensorflow. Chaque modèle devait être quantifié en nombres
+      entiers de 8 bits en utilisant Tensorflow Lite, avant d'être traité avec
+      la chaine d'outils de la carte. Ensuite, une application C++ utilisait
+      le modèle final pour être executé directement sur l'appareil
+      périphérique.
+    </p>
+    <p class="paragraph cv-content">
+      À la fin, j'avais implémenté avec succès deux modèles de computer vision
+      avec un troixième en cours.
+    </p>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
   <section class="screen cv" id="mcgill-robotics">
-    <img class="cv-logo" src="/img/mcgill_robotics_logo.png" alt="McGill Robotics logo">
+    <img class="cv-logo" src="/img/mcgill_robotics_logo.png" alt="McGill Robotics logo" />
     <h1 class="cv-role">Développeur Logiciel</h1>
-    <div class="cv-date">Oct 2022 - Présent</div>
+    <div class="cv-date">Oct 2022 - Déc 2022</div>
     <ul class="cv-keywords">
       <li>Programmation de Systèmes</li>
       <li>Design d'interface</li>
@@ -54,12 +121,30 @@
       <li>Ubuntu</li>
     </ul>
     <ul class="cv-summary">
-      <li>Développer le logiciel pour un rover martien qui participe au <i>University Rover Challenge</i>.</li>
-      <li>Collaborer sur un projet de génie logiciel au sein d'une équipe de trente étudiants.</li>
-      <li>Me familiariser avec le développement Linux (Ubuntu) pour travailler avec la librairie <i>Rover Operating System</i> (ROS).</li>
+      <li>
+        Développer le logiciel pour un rover martien qui participe au
+        <i>University Rover Challenge</i>.
+      </li>
+      <li>
+        Collaborer sur un projet de génie logiciel au sein d'une équipe de
+        trente étudiants.
+      </li>
+      <li>
+        Me familiariser avec le développement Linux (Ubuntu) pour travailler
+        avec la librairie <i>Rover Operating System</i> (ROS).
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Maintenant que j'étais à l'aise avec mes talents de développement logiciel et que je savais que mon expertise serait utile, j'ai rejoint l'équipe de robotique de McGill. Le slogan de l'équipe est «&nbsp;Inspirer des étudiants à construire des robots. Construire des robots pour inspirer des étudiants&nbsp;», ce qui communique parfaitement ma propre vision de ce que les projets d'ingéniérie devraient être. L'équipe a pour l'instant trois projets: un rover martien, un véhicule sous-marin autonome, et un drone. J'ai choisi de travailler sur le rover puisque j'ai toujours été intéressé par l'espace et tout ce qui s'y rapporte.
+      Maintenant que j'étais à l'aise avec mes talents de développement
+      logiciel et que je savais que mon expertise serait utile, j'ai rejoint
+      l'équipe de robotique de McGill. Le slogan de l'équipe est
+      «&nbsp;Inspirer des étudiants à construire des robots. Construire des
+      robots pour inspirer des étudiants&nbsp;», ce qui communique
+      parfaitement ma propre vision de ce que les projets d'ingéniérie
+      devraient être. L'équipe a pour l'instant trois projets: un rover
+      martien, un véhicule sous-marin autonome, et un drone. J'ai choisi de
+      travailler sur le rover puisque j'ai toujours été intéressé par l'espace
+      et tout ce qui s'y rapporte.
     </p>
   </section>
 
@@ -70,7 +155,7 @@
   </div>
 
   <section class="screen cv" id="chap-organization">
-    <img class="cv-logo" src="/img/chap_logo.png" alt="Chap logo">
+    <img class="cv-logo" src="/img/chap_logo.png" alt="Chap logo" />
     <h1 class="cv-role">Développeur Logiciel</h1>
     <div class="cv-date">Sep 2022 - Présent</div>
     <ul class="cv-keywords">
@@ -81,15 +166,36 @@
       <li>Collaboration</li>
     </ul>
     <ul class="cv-summary">
-      <li>Développer plusieurs projets de génie logiciel tels que le site web du club.</li>
-      <li>Collaborer sur des projets en utilisant des outils de gestion de projets tels Jira, MS Teams et GitHub.</li>
-      <li>Employer des techniques de développement agile par l'utilisation de Jira et des GitHub issues.</li>
+      <li>
+        Développer plusieurs projets de génie logiciel tels que le site web du
+        club.
+      </li>
+      <li>
+        Collaborer sur des projets en utilisant des outils de gestion de
+        projets tels Jira, MS Teams et GitHub.
+      </li>
+      <li>
+        Employer des techniques de développement agile par l'utilisation de
+        Jira et des GitHub issues.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Au début de ma deuxième année, j'ai été invité à rejoindre le tout nouveau club de McGill, Chap (<i>Competitive Hackathons And Projects</i>). Le club a pour but de permettre aux étudiants en génie logiciel de développer les talents nécessaires pour produire des projets logiciels haut de gamme, ainsi que de fournir un registre de développeurs logiciel engagés avec un intéret pour concourir dans des «&nbsp;hackathons&nbsp;». En tant qu'étudiant en génie logiciel, c'était le club parfait pour que je puisse travailler au sein d'une équipe, ainsi que pour me familiariser avec les outils et les pratiques utilisées dans l'industrie.
+      Au début de ma deuxième année, j'ai été invité à rejoindre le tout
+      nouveau club de McGill, Chap (<i>Competitive Hackathons And Projects</i>). Le club a pour but de permettre aux
+      étudiants en génie logiciel de
+      développer les talents nécessaires pour produire des projets logiciels
+      haut de gamme, ainsi que de fournir un registre de développeurs logiciel
+      engagés avec un intéret pour concourir dans des
+      «&nbsp;hackathons&nbsp;». En tant qu'étudiant en génie logiciel, c'était
+      le club parfait pour que je puisse travailler au sein d'une équipe,
+      ainsi que pour me familiariser avec les outils et les pratiques
+      utilisées dans l'industrie.
     </p>
     <p class="paragraph cv-content">
-      Pour l'instant, le club est encore très nouveau et se concentre sur créer la fondation requise pour qu'un club universitaire puisse réussir. En tant que tel, le seul projet en développement est le site web du club. Par contre, cela va certainement changer bientot.
+      Pour l'instant, le club est encore très nouveau et se concentre sur
+      créer la fondation requise pour qu'un club universitaire puisse réussir.
+      En tant que tel, le seul projet en développement est le site web du
+      club. Par contre, cela va certainement changer bientot.
     </p>
   </section>
 
@@ -100,7 +206,7 @@
   </div>
 
   <section class="screen cv" id="fujitsu-internship">
-    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo">
+    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo" />
     <h1 class="cv-role">Stagiaire en développement géomatique</h1>
     <div class="cv-date">Mai 2022 - Juil 2022</div>
     <ul class="cv-keywords">
@@ -111,18 +217,39 @@
       <li>Preuve de concept</li>
     </ul>
     <ul class="cv-summary">
-      <li>A développé avec succès une preuve de concept pour une application web de routage en intérieur avec JavaScript/Node.js.</li>
-      <li>A connecté une application web front-end avec une base de données PostgreSQL roulant sur un container Docker Ubuntu.</li>
-      <li>A identifié les technologies les plus efficaces pour l'encodage des données géographiques, pour les libraires JavaScript/Node.js et quel engin de routage à utiliser.</li>
+      <li>
+        A développé avec succès une preuve de concept pour une application web
+        de routage en intérieur avec JavaScript/Node.js.
+      </li>
+      <li>
+        A connecté une application web front-end avec une base de données
+        PostgreSQL roulant sur un container Docker Ubuntu.
+      </li>
+      <li>
+        A identifié les technologies les plus efficaces pour l'encodage des
+        données géographiques, pour les libraires JavaScript/Node.js et quel
+        engin de routage à utiliser.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Pour ce stage, j'ai été chargé de développer une preuve de concept pour une application web liée au routage en intérieur. Pendant le développement, j'ai du rechercher les technologies possibles et faire des décisions sur quelles technologies seraient les plus adaptées au projet. J'ai aussi du m'adapter à cause de problèmes de compatibilité que j'ai rencontré ce qui m'a poussé à utiliser des containers Docker pour le back-end de l'application.
+      Pour ce stage, j'ai été chargé de développer une preuve de concept pour
+      une application web liée au routage en intérieur. Pendant le
+      développement, j'ai du rechercher les technologies possibles et faire
+      des décisions sur quelles technologies seraient les plus adaptées au
+      projet. J'ai aussi du m'adapter à cause de problèmes de compatibilité
+      que j'ai rencontré ce qui m'a poussé à utiliser des containers Docker
+      pour le back-end de l'application.
     </p>
     <p class="paragraph cv-content">
-      L'application a été développée en JavaScript avec Yarn et Webpack. Pour le back-end, J'ai utilisé Docker Compose pour créer une base de données PostgreSQL, un API PostgREST et un engin de routage qui travailleraient tous les trois ensemble. L'appliation web a été deployée sur un serveur IIS.
+      L'application a été développée en JavaScript avec Yarn et Webpack. Pour
+      le back-end, J'ai utilisé Docker Compose pour créer une base de données
+      PostgreSQL, un API PostgREST et un engin de routage qui travailleraient
+      tous les trois ensemble. L'appliation web a été deployée sur un serveur
+      IIS.
     </p>
     <p class="paragraph cv-content">
-      À la fin du stage, l'application était totalement fonctionelle et répondait aux exigences du client.
+      À la fin du stage, l'application était totalement fonctionelle et
+      répondait aux exigences du client.
     </p>
   </section>
 
@@ -133,7 +260,7 @@
   </div>
 
   <section class="screen cv" id="tutoring">
-    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="St. Lawrence College logo">
+    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="St. Lawrence College logo" />
     <h1 class="cv-role">Tutorat</h1>
     <div class="cv-date">Semestre d'automne 2020</div>
     <ul class="cv-keywords">
@@ -143,13 +270,24 @@
       <li>Chimie</li>
     </ul>
     <ul class="cv-summary">
-      <li>A fait du tutorat pour d'autres élèves du cégep en mathématiques, physique et chimie.</li>
+      <li>
+        A fait du tutorat pour d'autres élèves du cégep en mathématiques,
+        physique et chimie.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Au début de ma deuxième année de cégep, j'ai été contacté en tant que tuteur potentiel pour les cours dans lesquels je réussissais le mieux, soit les mathématiques, la physique et la chimie. Vu que j'apprécie aider les autres à apprendre et faire comprendre les autres, j'ai commencé à faire du tutorat.
+      Au début de ma deuxième année de cégep, j'ai été contacté en tant que
+      tuteur potentiel pour les cours dans lesquels je réussissais le mieux,
+      soit les mathématiques, la physique et la chimie. Vu que j'apprécie
+      aider les autres à apprendre et faire comprendre les autres, j'ai
+      commencé à faire du tutorat.
     </p>
     <p class="paragraph cv-content">
-      Puisque c'était en automne 2020, les confinement liés à la covid étaient en place et j'ai du faire du tutorat via videoconférence. Cela à légèrement compliqué la tâche, mais j'ai pu utiliser les outils à ma disposition pour tirer le meilleur parti de cette situation et enseinger du mieux que je pouvais!
+      Puisque c'était en automne 2020, les confinement liés à la covid étaient
+      en place et j'ai du faire du tutorat via videoconférence. Cela à
+      légèrement compliqué la tâche, mais j'ai pu utiliser les outils à ma
+      disposition pour tirer le meilleur parti de cette situation et enseinger
+      du mieux que je pouvais!
     </p>
   </section>
 

@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Experience | Thibaut Baguette | Software Engineer</title>
+  <title>Experience | Thibaut Baguette | Software Developer</title>
 
   <!-- Styles and fonts -->
-  <link rel="stylesheet" href="/css/experience.css">
+  <link rel="stylesheet" href="/css/experience.css" />
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="module" src="/js/header.js"></script>
   <script type="module" src="/js/footer.js"></script>
   <script src="/js/go_up.js"></script>
-  
 </head>
 
 <body>
@@ -29,8 +27,15 @@
   <section class="screen" id="intro-screen">
     <div id="intro-text-container">
       <h1 class="header">My experience</h1>
-      <p class="paragraph">While experience with projects is important, internship experience teaches not only technical skills but also soft skills crucial for software engineers.</p>
-      <p class="paragraph">Below you will find information about my internships and other forms of experience as part of a team.</p>
+      <p class="paragraph">
+        While experience with projects is important, internship experience
+        teaches not only technical skills but also soft skills crucial for
+        software engineers.
+      </p>
+      <p class="paragraph">
+        Below you will find information about my internships and other forms
+        of experience as part of a team.
+      </p>
     </div>
   </section>
 
@@ -40,10 +45,68 @@
     </svg>
   </div>
 
+  <section class="screen cv" id="rssl-internship">
+    <img class="cv-logo" src="/img/rssl-logo-r-white.png" alt="Reliable Silicon Systems Lab logo" />
+    <h1 class="cv-role">Machine Learning Research Assistant</h1>
+    <div class="cv-date">May 2023 - Jul 2023</div>
+    <ul class="cv-keywords">
+      <li>Python</li>
+      <li>Tensorflow</li>
+      <li>Computer Vision</li>
+      <li>Machine Learning</li>
+      <li>C++</li>
+      <li>Academic Research</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>
+        Implemented computer vision models from published papers in Python
+        with Tensorflow.
+      </li>
+      <li>
+        Developed a C++ application using a computer vision model to process a
+        video feed in real time.
+      </li>
+      <li>
+        Processed quantized neural networks using specialized tooling for use
+        on a development board.
+      </li>
+      <li>
+        Set up a development board for research and development uses,
+        including installing the OS and building drivers.
+      </li>
+    </ul>
+    <p class="paragraph cv-content">
+      For my second internship, I have the chance to work as a research
+      assistant at the Reliable Silicon Systems Lab at McGill University. My
+      task was to set up a machine learning development board and to figure
+      out how to get a computer vision model to run on it. The development
+      board was a Raspberry Pi with a camera module with a hardware
+      acceleration chip for machine learning tasks.
+    </p>
+    <p class="paragraph cv-content">
+      During the internship, I implemented multiple computer vision models
+      from published papers, such as LeNet and PortraitNet, using Tensorflow.
+      Each model had to be quantized to 8-bit integers using Tensorflow Lite,
+      before being processed and pacakged with the board's proprietary
+      toolchain. Then, a C++ application would use the packaged model to run
+      directly on the edge device.
+    </p>
+    <p class="paragraph cv-content">
+      By the end, I had successfully implemented and run two computer vision
+      models and a third one was in progress.
+    </p>
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
   <section class="screen cv" id="mcgill-robotics">
-    <img class="cv-logo" src="/img/mcgill_robotics_logo.png" alt="McGill Robotics logo">
+    <img class="cv-logo" src="/img/mcgill_robotics_logo.png" alt="McGill Robotics logo" />
     <h1 class="cv-role">Software Developer</h1>
-    <div class="cv-date">Oct 2022 - Present</div>
+    <div class="cv-date">Oct 2022 - Dec 2022</div>
     <ul class="cv-keywords">
       <li>Systems Programming</li>
       <li>UI design</li>
@@ -54,12 +117,28 @@
       <li>Ubuntu</li>
     </ul>
     <ul class="cv-summary">
-      <li>Developing the software for a Mars rover competing in the University Rover Challenge.</li>
-      <li>Collaborating on a software engineering project within a team of thirty students.</li>
-      <li>Familiarizing myself with Linux (Ubuntu) development to work with the Rover Operating System (ROS) library.</li>
+      <li>
+        Developing the software for a Mars rover competing in the University
+        Rover Challenge.
+      </li>
+      <li>
+        Collaborating on a software engineering project within a team of
+        thirty students.
+      </li>
+      <li>
+        Familiarizing myself with Linux (Ubuntu) development to work with the
+        Rover Operating System (ROS) library.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Now that I felt comfortable with my software development skills and that I knew I could put my expertise to use, I joined the McGill Robotics Team. The team's slogan is "Inspiring students to build robots. Building robots to inspire students", which I think embodies perfectly my own vision of what engineering projects should be. The team currently has three projects: a Mars rover, an autonomous underwater vehicle (AUV), and a drone. I have chosen to work on the rover as I have always been interested in space and everything around it.
+      Now that I felt comfortable with my software development skills and that
+      I knew I could put my expertise to use, I joined the McGill Robotics
+      Team. The team's slogan is "Inspiring students to build robots. Building
+      robots to inspire students", which I think embodies perfectly my own
+      vision of what engineering projects should be. The team currently has
+      three projects: a Mars rover, an autonomous underwater vehicle (AUV),
+      and a drone. I have chosen to work on the rover as I have always been
+      interested in space and everything around it.
     </p>
   </section>
 
@@ -70,7 +149,7 @@
   </div>
 
   <section class="screen cv" id="chap-organization">
-    <img class="cv-logo" src="/img/chap_logo.png" alt="Chap logo">
+    <img class="cv-logo" src="/img/chap_logo.png" alt="Chap logo" />
     <h1 class="cv-role">Software Developer</h1>
     <div class="cv-date">Sep 2022 - Present</div>
     <ul class="cv-keywords">
@@ -81,15 +160,35 @@
       <li>Collaboration</li>
     </ul>
     <ul class="cv-summary">
-      <li>Developing multiple software engineering projects such as the club's own website.</li>
-      <li>Collaborating on projects using project management tools such as Jira, MS Teams, and GitHub.</li>
-      <li>Employing Agile development techniques through the use of Jira and GitHub issues.</li>
+      <li>
+        Developing multiple software engineering projects such as the club's
+        own website.
+      </li>
+      <li>
+        Collaborating on projects using project management tools such as Jira,
+        MS Teams, and GitHub.
+      </li>
+      <li>
+        Employing Agile development techniques through the use of Jira and
+        GitHub issues.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      At the start of my second year, I was invited to join the brand new McGill club, Chap (Competitive Hackathons And Projects). The club's goal is to allow software engineering students to develop the skills necessary to produce top-of-the-line software projects, as well as providing a roster of engaged software developers with an interest in competing in hackathons. As a software engineering student, this is the perfect club for me to work on bigger projects and learn to work as part of a team, in addition to familiarizing myself with the tools and practices used in the industry. 
+      At the start of my second year, I was invited to join the brand new
+      McGill club, Chap (Competitive Hackathons And Projects). The club's goal
+      is to allow software engineering students to develop the skills
+      necessary to produce top-of-the-line software projects, as well as
+      providing a roster of engaged software developers with an interest in
+      competing in hackathons. As a software engineering student, this is the
+      perfect club for me to work on bigger projects and learn to work as part
+      of a team, in addition to familiarizing myself with the tools and
+      practices used in the industry.
     </p>
     <p class="paragraph cv-content">
-      As of now, the club is still very new and its focus is on creating the foundation required for a university club to be successful. As such, the only project currently in development is the club's own website. However this is bound to change soon.
+      As of now, the club is still very new and its focus is on creating the
+      foundation required for a university club to be successful. As such, the
+      only project currently in development is the club's own website. However
+      this is bound to change soon.
     </p>
   </section>
 
@@ -100,7 +199,7 @@
   </div>
 
   <section class="screen cv" id="fujitsu-internship">
-    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo">
+    <img class="cv-logo" src="/img/fujitsu-logo.svg" alt="Fujitsu logo" />
     <h1 class="cv-role">GIS Developer Intern</h1>
     <div class="cv-date">May 2022 - Jul 2022</div>
     <ul class="cv-keywords">
@@ -111,18 +210,37 @@
       <li>Proof-of-Concept</li>
     </ul>
     <ul class="cv-summary">
-      <li>Successfully developed a proof-of-concept indoor routing web application in JavaScript/Node.js.</li>
-      <li>Connected a front-end web application to a PostgreSQL database running on an Ubuntu Docker container.</li>
-      <li>Identified the most efficient technologies concerning what format the geographic data should be encoded in, which JavaScript libraries and which routing engine to use.</li>
+      <li>
+        Successfully developed a proof-of-concept indoor routing web
+        application in JavaScript/Node.js.
+      </li>
+      <li>
+        Connected a front-end web application to a PostgreSQL database running
+        on an Ubuntu Docker container.
+      </li>
+      <li>
+        Identified the most efficient technologies concerning what format the
+        geographic data should be encoded in, which JavaScript libraries and
+        which routing engine to use.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      For this internship I was tasked with developing a proof-of-concept for a web application related to indoor routing. During the development, I had to research the available technologies and make decisions as to which technologies were best suited for this project. I also had to adapt to some compatibility issues I encountered and instead opted for Docker containers for the back-end of the application. 
+      For this internship I was tasked with developing a proof-of-concept for
+      a web application related to indoor routing. During the development, I
+      had to research the available technologies and make decisions as to
+      which technologies were best suited for this project. I also had to
+      adapt to some compatibility issues I encountered and instead opted for
+      Docker containers for the back-end of the application.
     </p>
     <p class="paragraph cv-content">
-      The application was developed in JavaScript with Yarn and Webpack. For the back-end, I used Docker Compose to create a PostgreSQL database, a PostgREST API, and a routing engine that would all three work together. The web application was deployed on an IIS server.
+      The application was developed in JavaScript with Yarn and Webpack. For
+      the back-end, I used Docker Compose to create a PostgreSQL database, a
+      PostgREST API, and a routing engine that would all three work together.
+      The web application was deployed on an IIS server.
     </p>
     <p class="paragraph cv-content">
-      At the end of the internship, the application was fully functional and responded to the clients' requirements. 
+      At the end of the internship, the application was fully functional and
+      responded to the clients' requirements.
     </p>
   </section>
 
@@ -133,7 +251,7 @@
   </div>
 
   <section class="screen cv" id="tutoring">
-    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="St. Lawrence College logo">
+    <img class="cv-logo" src="/img/stlawrence_logo.png" alt="St. Lawrence College logo" />
     <h1 class="cv-role">Tutoring</h1>
     <div class="cv-date">Fall 2020 Semester</div>
     <ul class="cv-keywords">
@@ -143,13 +261,21 @@
       <li>Chemistry</li>
     </ul>
     <ul class="cv-summary">
-      <li>Tutored other CEGEP students in mathematics, physics, and chemistry.</li>
+      <li>
+        Tutored other CEGEP students in mathematics, physics, and chemistry.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      At the beginning of my second year of CEGEP, I was contacted as a potential tutor for the classes I was best at: mathematics, physics, and chemistry. As I enjoy helping other people learn and making people understand things, I started tutoring.
+      At the beginning of my second year of CEGEP, I was contacted as a
+      potential tutor for the classes I was best at: mathematics, physics, and
+      chemistry. As I enjoy helping other people learn and making people
+      understand things, I started tutoring.
     </p>
     <p class="paragraph cv-content">
-      Since this was in the fall of 2020, the covid-related lockdowns were in effect and I had to tutor through videoconferencing sessions. This made the task somewhat more difficult, but I used the tools available to me to make the most out of this experience and to teach as best I could! 
+      Since this was in the fall of 2020, the covid-related lockdowns were in
+      effect and I had to tutor through videoconferencing sessions. This made
+      the task somewhat more difficult, but I used the tools available to me
+      to make the most out of this experience and to teach as best I could!
     </p>
   </section>
 

@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Projets | Thibaut Baguette | Ingénieur Logiciel</title>
+  <title>Projets | Thibaut Baguette | Développeur Logiciel</title>
 
   <!-- Styles and fonts -->
-  <link rel="stylesheet" href="/css/projects.css">
+  <link rel="stylesheet" href="/css/projects.css" />
   <script src="https://kit.fontawesome.com/c44fbb638c.js" crossorigin="anonymous"></script>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="module" src="/js/header.js"></script>
   <script type="module" src="/js/footer.js"></script>
   <script src="/js/go_up.js"></script>
@@ -24,15 +23,197 @@
 <body>
   <header-component></header-component>
   <go-up></go-up>
-  
+
   <section class="screen" id="intro-screen">
     <div id="intro-text-container">
       <h1 class="header">Mes projets</h1>
-      <p class="paragraph">Une des meilleures façons d'apprendre la programmation est en pratiquant et en travaillant sur des projets. Que ce soit seul ou en équipe, pour un cours ou un projet personnel, essayer de créer quelque chose est crucial pour concrétizer les connaissances théoriques.</p>
-      <p class="paragraph">Mes plus gros projets sont présentés ci-dessous, et la majorité sont aussi présentés sur GitHub. Faites défiler pour les découvrir!</p>
+      <p class="paragraph">
+        Une des meilleures façons d'apprendre la programmation est en
+        pratiquant et en travaillant sur des projets. Que ce soit seul ou en
+        équipe, pour un cours ou un projet personnel, essayer de créer quelque
+        chose est crucial pour concrétizer les connaissances théoriques.
+      </p>
+      <p class="paragraph">
+        Mes plus gros projets sont présentés ci-dessous, et la majorité sont
+        aussi présentés sur GitHub. Faites défiler pour les découvrir!
+      </p>
     </div>
   </section>
 
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="rust-roguelike">
+    <h1 class="cv-role">The Amulet of Sirref</h1>
+    <div class="cv-date">Mai 2023 - Juil 2023</div>
+    <ul class="cv-keywords">
+      <li>Rust</li>
+      <li>Bracket-lib</li>
+      <li>WebAssembly</li>
+      <li>Développement de Jeux Vidéos</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>
+        A développé un jeu roguelike en Rust avec la librairie Bracket-lib et
+        le ECS Legion.
+      </li>
+      <li>
+        A implémenté un système de génération de cartes procédural, un système
+        de combat au tour-par-tour, et une IA d'ennemis simple.
+      </li>
+      <li>
+        A publié le jeu publiquement en application web assembly, jouable
+        depuis virtuellement tous les appareils avec un clavier.
+      </li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Pour ce deuxième projet en Rust, je voulais me lancer plus sérieusement
+      dans le développement de jeux vidéos. J'ai donc décidé de suivre le
+      livre
+      <a href="https://hands-on-rust.com" target="_blank"><i>Hands-on Rust</i></a>
+      de Herbert Wolverson, un tutoriel d'introduction sur les jeux roguelike
+      en Rust. J'ai par contre poussé mon jeu beuacoup plus loin en ajoutant
+      beaucoup de fonctionnalités telles différents modes de jeu, plus
+      d'items, plus d'ennemis, etc.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Le jeu est un roguelike au tour-par-tour, où le joueur doit trouver
+      l'Amulette de Sirref, un artefact puissant qui lui permettra de vaincre
+      les monstres maléfiques. Le joueur doit se battre contre des monstres à
+      travers le donjon, collectant des items pour l'aider sur sa quête, tels
+      des armes, de l'armure, des potions et des items spéciaux.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Globalement, je suis très fier de ce que j'ai accompli pour mon premier
+      projet sérieux en développement de jeux vidéos. J'ai aussi appris
+      énormément à propos du développement de jeux vidéos, notemment comment
+      fonctionne l'architecture entity-component-system, tout en améliorant
+      mes capacités en Rust.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Le jeu est disponible en ligne, directement dans votre navigateur web:
+      <a href="https://thibautbaguette.com/rust-roguelike" target="_blank">essayez-le!</a>
+      (clavier nécessaire).
+    </p>
+    <img class="cv-image first" src="/img/rust-roguelike_screenshot.png"
+      alt="A screenshot of my game The Amulet of Sirref" />
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="rust-webapp-demo">
+    <h1 class="cv-role">Démo d'application web Rust</h1>
+    <div class="cv-date">Jan 2023 - Avr 2023</div>
+    <ul class="cv-keywords">
+      <li>Rust</li>
+      <li>Rocket</li>
+      <li>SeaORM</li>
+      <li>Yew</li>
+      <li>PostgreSQL</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>
+        A développé une application web en utilisant le langage de
+        programmation Rust pour le stack complet.
+      </li>
+      <li>
+        A utilisé le framework Rocket avec SeaORM pour le backend et Yew pour
+        le frontend.
+      </li>
+      <li>
+        A créé un frontend d'application web vif, s'exécutant dans le
+        navigateur grâce a WebAssembly.
+      </li>
+    </ul>
+    <p class="paragraph cv-content with-image">
+      Le but principal de ce projet était de jeter un coup d'oeil aux
+      frameworks web en Rust et de voir comment serait l'expérience de créer
+      une application web complètement en Rust. Le site web est une
+      application de gestion de discographie, où l'utilisateur peut créer et
+      lier des artistes, des albums, et des chansons.
+    </p>
+    <p class="paragraph cv-content with-image">
+      Globalement, j'ai été impressioné par les frameworks, étant donné que
+      Rust est un langage encore relativement jeune. Les frameworks étaient
+      similaires à d'autres frameworks avec lesquels j'avais précédemment
+      travaillé, tels Spring et React, tout en gardant les aspects qui rendent
+      Rust génial. Je me suis beaucoup amusé à travailler sur ce projet, à
+      travers lequel j'ai aussi appris beaucoup à propos de Rust et de
+      WebAssembly.
+    </p>
+    <img class="cv-image first" src="/img/artist_details.png" alt="A screenshot of the artist details page" />
+  </section>
+
+  <div class="separator-container">
+    <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
+    </svg>
+  </div>
+
+  <section class="screen cv" id="purposeful">
+    <h1 class="cv-role">Purposeful</h1>
+    <div class="cv-date">Jan 2023 - Mai 2023</div>
+    <ul class="cv-keywords">
+      <li>Java</li>
+      <li>JavaScript</li>
+      <li>Spring</li>
+      <li>Next.js</li>
+      <li>PostgreSQL</li>
+    </ul>
+    <ul class="cv-summary">
+      <li>
+        A développé une application web permettant aux utilisateurs de
+        partager des idées de projets et de trouver des collaborateurs.
+      </li>
+      <li>
+        A travaillé dans une équipe de 10 développeurs pendant deux sprints
+        pour développer une application complètement fonctionnelle.
+      </li>
+      <li>
+        A géré le développement du projet en utilisant le principe scrum avec
+        un product owner et un scrum master.
+      </li>
+      <li>
+        A implémenté des fonctionnalités avancées telles l'autentification
+        OAuth2 avec Spring Security et des tokens JWT.
+      </li>
+    </ul>
+    <p class="paragraph cv-content">
+      Pour ce projet, nous nous sommes attaqués à un problème que nous voyons
+      souvent en tant qu'étudiants en génie logiciel: tout le monde veut
+      travailler sur des gros projets, mais tout le monde travaille seul, ce
+      qui limite le potentiel de ce qui est créé. Le but était donc de créer
+      une plateform où les utilisateurs peuvent facilement collaborer pour
+      créer des projets ayant une utilité et un but concrets.
+    </p>
+    <p class="paragraph cv-content">
+      Une grosse partie du projet était aussi d'avoir l'expérience de
+      travailler dans une grande équipe, avec 10 développeurs, et de voir
+      comment gérer le projet avec la méthodologie scrum. Nous avons donc
+      travaillé sur le projet pendant deux sprints de trois semaines, où nous
+      gérions le backlog, précisions les tâches au début des sprints, se
+      recontraient pour planifier les prints, etc. Nous avions aussi un
+      product owner pour concentrer nos efforts dans le but d'avoir un projet
+      fonctionnel et un scrum master qui aidait les autres développeurs s'ils
+      avaient des problèmes.
+    </p>
+    <p class="paragraph cv-content">
+      Le résultat est probablement le projet le plus poli sur lequel j'ai
+      travaillé avec beaucoup de fonctionnalités et une très bonne expérience
+      utilisateur. Je suis très fier de ce que nous avons accompli, étant
+      donné le laps de temps et nos horaires très occupés. Nous avons aussi pu
+      travailler sur des fonctionnalités plus avancées telles
+      l'autentification, ce qui est quelque chose que nous avions souvant
+      négligé précédemment à cause de contraintes de temps.
+    </p>
+  </section>
   <div class="separator-container">
     <svg class="separator" viewBox="0 0 100 100" preserveAspectRatio="none">
       <polyline points="0 30, 100 0, 100 70, 0 100"></polyline>
@@ -50,15 +231,40 @@
       <li>PostgreSQL</li>
     </ul>
     <ul class="cv-summary">
-      <li>A créé une application web pour gérer les items, employés et clients d'un musée.</li>
-      <li>A développé une application web moderne du design du modèle de domaine et le backend Java avec Spring et une base de données PostgreSQL au frontend avec TypeScript et Next.js.</li>
-      <li>A collaboré au sein d'une équipe de six développeurs en utilisant des GitHub Issues et un GitHub Project pour gérer le développement.</li>
+      <li>
+        A créé une application web pour gérer les items, employés et clients
+        d'un musée.
+      </li>
+      <li>
+        A développé une application web moderne du design du modèle de domaine
+        et le backend Java avec Spring et une base de données PostgreSQL au
+        frontend avec TypeScript et Next.js.
+      </li>
+      <li>
+        A collaboré au sein d'une équipe de six développeurs en utilisant des
+        GitHub Issues et un GitHub Project pour gérer le développement.
+      </li>
     </ul>
     <p class="paragraph cv-content">
-      Ce projet est une application web de gestion pour un musée fictif qui permet la gestion des items, employés et clients du musée. Les items peuvent être déplacés dans des pièces spécifiques ou en stockage et peuvent être loués par les clients. Les clients peuvent aussi donner des items au musée. Les employés peuvent approuver les locations et les donations ainsi que de mettre des items en stockage ou en salle de montre. Finalement, le propriétaire du musée peut performer les mêmes actions qu'un employé, mais peut aussi engager et renvoyer des employés.
+      Ce projet est une application web de gestion pour un musée fictif qui
+      permet la gestion des items, employés et clients du musée. Les items
+      peuvent être déplacés dans des pièces spécifiques ou en stockage et
+      peuvent être loués par les clients. Les clients peuvent aussi donner des
+      items au musée. Les employés peuvent approuver les locations et les
+      donations ainsi que de mettre des items en stockage ou en salle de
+      montre. Finalement, le propriétaire du musée peut performer les mêmes
+      actions qu'un employé, mais peut aussi engager et renvoyer des employés.
     </p>
     <p class="paragraph cv-content">
-      Puisque ce projet est plus ou moins un successeur au <a href="./projects.html#divesafe-project">projet DiveSafe</a>, les buts sont similaires : d'apprendre des techniques de gestion de projet et de se familiariser avec les outils utilisés en industrie. Comme tel, nous avons utilisé un tableau Kanban avec un GitHub Project pour gérer les tâches. Nous avons aussi utilisé GitHub et des GitHub Issues pour collaborer sur le projet et pour gérer notre code. Le backend a été écrit en Java avec le framework Spring connecté à une base de données PostgreSQL. Le frontend a été écrit en TypeScript avec Next.js.
+      Puisque ce projet est plus ou moins un successeur au
+      <a href="./projects.html#divesafe-project">projet DiveSafe</a>, les buts
+      sont similaires : d'apprendre des techniques de gestion de projet et de
+      se familiariser avec les outils utilisés en industrie. Comme tel, nous
+      avons utilisé un tableau Kanban avec un GitHub Project pour gérer les
+      tâches. Nous avons aussi utilisé GitHub et des GitHub Issues pour
+      collaborer sur le projet et pour gérer notre code. Le backend a été
+      écrit en Java avec le framework Spring connecté à une base de données
+      PostgreSQL. Le frontend a été écrit en TypeScript avec Next.js.
     </p>
   </section>
 
@@ -69,9 +275,10 @@
   </div>
 
   <section class="screen cv" id="portfolio-website">
-    <img class="cv-logo" src="/favicon.ico" alt="Website logo">
+    <img class="cv-logo" src="/favicon.ico" alt="Website logo" />
     <h1 class="cv-role">Site web portfolio</h1>
-    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/spacewaiker.github.io/" target="_blank">
+    <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/spacewaiker.github.io/"
+      target="_blank">
       <i class="fa-brands fa-github"></i></a>
     <div class="cv-date">Mai 2022 - Août 2022</div>
     <ul class="cv-keywords">
@@ -82,23 +289,40 @@
     </ul>
     <ul class="cv-summary">
       <li>A designé un site web portfolio pour développeur avec Figma.</li>
-      <li>A créé un site web statique adaptatif avec du HTML, du CSS et du JavaScript.</li>
-      <li>A publié un site web bilingue avec GitHub Pages et Google Domains.</li>
+      <li>
+        A créé un site web statique adaptatif avec du HTML, du CSS et du
+        JavaScript.
+      </li>
+      <li>
+        A publié un site web bilingue avec GitHub Pages et Google Domains.
+      </li>
     </ul>
     <p class="paragraph cv-content with-image">
-      Pendant l'été j'ai designé et créé ce site même. J'ai suivi des cours de HTML, CSS, JavaScript et JQuery pour démarrer et puis j'ai appris le reste en cours de route.
+      Pendant l'été j'ai designé et créé ce site même. J'ai suivi des cours de
+      HTML, CSS, JavaScript et JQuery pour démarrer et puis j'ai appris le
+      reste en cours de route.
     </p>
     <p class="paragraph cv-content with-image">
-      J'ai d'abord designé le site avec Figma et je me suis décidé sur un design qui était intéractif et amusant, tout en étant simple et fonctionnel. J'ai aussi choisi une palette de couleurs, les polices que j'utiliserais, et quel contenu j'y incluerait.
+      J'ai d'abord designé le site avec Figma et je me suis décidé sur un
+      design qui était intéractif et amusant, tout en étant simple et
+      fonctionnel. J'ai aussi choisi une palette de couleurs, les polices que
+      j'utiliserais, et quel contenu j'y incluerait.
     </p>
     <p class="paragraph cv-content with-image">
-      Après, j'ai commencé à prototyper certaines parties du site, telles le bouton de menu sur mobile, la ligne du temps qui défile horizontalement, et l'animation du titre. Ceci m'a permis de me familiariser avec JavaScript, ainsi que de commencer à créer des parties du site web. Par la suite, j'ai commencé à créer le site complet.
+      Après, j'ai commencé à prototyper certaines parties du site, telles le
+      bouton de menu sur mobile, la ligne du temps qui défile horizontalement,
+      et l'animation du titre. Ceci m'a permis de me familiariser avec
+      JavaScript, ainsi que de commencer à créer des parties du site web. Par
+      la suite, j'ai commencé à créer le site complet.
     </p>
     <p class="paragraph cv-content with-image">
-      Avec beaucoup de créativité, de resolution de problèmes et de dédication, j'ai pu finir le site web avant le début du semestre d'automne 2022, et avant le début de la période d'application de stages.
+      Avec beaucoup de créativité, de resolution de problèmes et de
+      dédication, j'ai pu finir le site web avant le début du semestre
+      d'automne 2022, et avant le début de la période d'application de stages.
     </p>
-    <img class="cv-image first" src="/img/website_screenshot_desktop.png" alt="A screenshot of the desktop website">
-    <img id="website-screenshot-mobile" class="cv-image second" src="/img/website_screenshot_mobile.jpg" alt="A screenshot of the mobile website"> 
+    <img class="cv-image first" src="/img/website_screenshot_desktop.png" alt="A screenshot of the desktop website" />
+    <img id="website-screenshot-mobile" class="cv-image second" src="/img/website_screenshot_mobile.jpg"
+      alt="A screenshot of the mobile website" />
   </section>
 
   <div class="separator-container">
@@ -108,7 +332,7 @@
   </div>
 
   <section class="screen cv" id="divesafe-project">
-    <img class="cv-logo" src="/img/DiveSafe_logo.png" alt="DiveSafe logo">
+    <img class="cv-logo" src="/img/DiveSafe_logo.png" alt="DiveSafe logo" />
     <h1 class="cv-role">DiveSafe</h1>
     <div class="cv-date">Jan 2022 - Avr 2022</div>
     <ul class="cv-keywords">
@@ -121,21 +345,44 @@
       <li>JavaFX</li>
     </ul>
     <ul class="cv-summary">
-      <li>A développé une application avec interface graphique permettant de gérer les membres et les excursions de plongée, ainsi que la location d'équipement.</li>
-      <li>A collaboré avec cinq autres développeurs du design de l'architecture au développement et à la phase de tests.</li>
-      <li>A utilisé le motif d'architecture modèle-vue-contrôleur et a développé l'application en « test-driven-development » ainsi qu'en « behavior-driven-development ».</li>
+      <li>
+        A développé une application avec interface graphique permettant de
+        gérer les membres et les excursions de plongée, ainsi que la location
+        d'équipement.
+      </li>
+      <li>
+        A collaboré avec cinq autres développeurs du design de l'architecture
+        au développement et à la phase de tests.
+      </li>
+      <li>
+        A utilisé le motif d'architecture modèle-vue-contrôleur et a développé
+        l'application en « test-driven-development » ainsi qu'en «
+        behavior-driven-development ».
+      </li>
       <li>A designé et créé un logo pour l'application.</li>
     </ul>
     <p class="paragraph cv-content with-image">
-      L'application DiveSafe est une application de gestion pour une companie de plongée fictive. Elle permet de gérer les membres du club, les guides de plongée et leur horaire, les excursions des membres, et la location d'équipement.
+      L'application DiveSafe est une application de gestion pour une companie
+      de plongée fictive. Elle permet de gérer les membres du club, les guides
+      de plongée et leur horaire, les excursions des membres, et la location
+      d'équipement.
     </p>
     <p class="paragraph cv-content with-image">
-      Le but principal de ce projet était d'expérimenter avec des motifs de design et des styles de développement populaires. Le motif d'architecture choisi était donc le modèle-vue-contrôleur. Le modèle a été construit à partir d'un diagramme UML, et les classes Java ont été générées automatiquement à partir d'une description du modèle grâce à l'outil Umple. Certaines parties du contrôleur ont été développées en « test-driven-development », et d'autres en « behavior-driven-development ». Pour les tests unitaires, nous avons utilisé JUnit, alors que pour les tests d'intégration, nous avons utilisé Cucumber et Gherkin. Finalement, nous avons utilisé JavaFX pour créer l'interface graphique.
+      Le but principal de ce projet était d'expérimenter avec des motifs de
+      design et des styles de développement populaires. Le motif
+      d'architecture choisi était donc le modèle-vue-contrôleur. Le modèle a
+      été construit à partir d'un diagramme UML, et les classes Java ont été
+      générées automatiquement à partir d'une description du modèle grâce à
+      l'outil Umple. Certaines parties du contrôleur ont été développées en «
+      test-driven-development », et d'autres en « behavior-driven-development
+      ». Pour les tests unitaires, nous avons utilisé JUnit, alors que pour
+      les tests d'intégration, nous avons utilisé Cucumber et Gherkin.
+      Finalement, nous avons utilisé JavaFX pour créer l'interface graphique.
     </p>
     <p class="paragraph cv-content with-image">
       J'ai aussi designé et créé le logo de l'application visible ci-dessus!
     </p>
-    <img class="cv-image first" src="/img/divesafe_screenshot.png" alt="A screenshot of the DiveSafe app.">
+    <img class="cv-image first" src="/img/divesafe_screenshot.png" alt="A screenshot of the DiveSafe app." />
   </section>
 
   <div class="separator-container">
@@ -148,7 +395,8 @@
     <h1 class="cv-role no-logo">AirDraw</h1>
     <a class="sliding-underline cv-github-link" href="https://www.github.com/SpacewaIker/AirDraw/" target="_blank">
       <i class="fa-brands fa-github"></i></a>
-    <a id="devpost-link" class="sliding-underline cv-github-link" href="https://devpost.com/software/air-drawing" target="_blank">
+    <a id="devpost-link" class="sliding-underline cv-github-link" href="https://devpost.com/software/air-drawing"
+      target="_blank">
       <i class="fa-solid fa-circle-info"></i></a>
     <div class="cv-date">Oct 2021 - Nov 2021</div>
     <ul class="cv-keywords">
@@ -160,20 +408,47 @@
       <li>StreamLit</li>
     </ul>
     <ul class="cv-summary">
-      <li>A développé une application web basée sur l'intelligence artificielle en Python.</li>
-      <li>A créé, entraîné, et sauvegardé le modèle de machine learning utilisé pour la reconaissance des signes de mains.</li>
-      <li>A amélioré la performance du modèle en utilisant des techniques d'augmentation de données.</li>
+      <li>
+        A développé une application web basée sur l'intelligence artificielle
+        en Python.
+      </li>
+      <li>
+        A créé, entraîné, et sauvegardé le modèle de machine learning utilisé
+        pour la reconaissance des signes de mains.
+      </li>
+      <li>
+        A amélioré la performance du modèle en utilisant des techniques
+        d'augmentation de données.
+      </li>
     </ul>
     <p class="paragraph cv-content with-image">
-      Ce projet était le dernier du cours d'IA « MAIS 202 » de la société d'intelligence artificielle de McGill. Le but du projet était d'utiliser tout ce que nous avions appris dans le cours pour créer une application basée sur l'intelligence artificielle. Mon coéquipier et moi étions intéressés par la vision par ordinateur et avons donc décidé de créer une application où l'utilisateur dessinerait des formes en bougeant sa main et en faisant des signes devant une caméra.
+      Ce projet était le dernier du cours d'IA « MAIS 202 » de la société
+      d'intelligence artificielle de McGill. Le but du projet était d'utiliser
+      tout ce que nous avions appris dans le cours pour créer une application
+      basée sur l'intelligence artificielle. Mon coéquipier et moi étions
+      intéressés par la vision par ordinateur et avons donc décidé de créer
+      une application où l'utilisateur dessinerait des formes en bougeant sa
+      main et en faisant des signes devant une caméra.
     </p>
     <p class="paragraph cv-content with-image">
-      Nous avons géré le développement complet de l'application, de la collection des données d'entraînement au choix d'algorithme et la création et l'entraînement du modèle. Nous avons décidé d'opter pour un algorithme d'arbre de décision pour la classificiation des signes de main. Nous avons utilisé la librairie Hands de MediaPipe pour extraire la position des mains du flux vidéo. Pour l'application web nous avons utilisé StreamLit et PyVirtualCam puisque ces librairies étaient simples et correspondaient parfaitement à nos besoins.
+      Nous avons géré le développement complet de l'application, de la
+      collection des données d'entraînement au choix d'algorithme et la
+      création et l'entraînement du modèle. Nous avons décidé d'opter pour un
+      algorithme d'arbre de décision pour la classificiation des signes de
+      main. Nous avons utilisé la librairie Hands de MediaPipe pour extraire
+      la position des mains du flux vidéo. Pour l'application web nous avons
+      utilisé StreamLit et PyVirtualCam puisque ces librairies étaient simples
+      et correspondaient parfaitement à nos besoins.
     </p>
     <p class="paragraph cv-content with-image">
-      Puisqu'il s'agissait d'un projet d'équipe, j'ai pu développer mes compétences de travail d'équipe. Notament, j'ai du démontrer de bonnes compétences de communication et de gestion du temps à cause de problèmes que j'ai rencontrés avec mon coéquipier. Le code pour l'entraînement du modèle ainsi qu'une preuve de concept sont disponibles sur le dépot GitHub. Une page DevPost a aussi été créée pour le projet.
+      Puisqu'il s'agissait d'un projet d'équipe, j'ai pu développer mes
+      compétences de travail d'équipe. Notament, j'ai du démontrer de bonnes
+      compétences de communication et de gestion du temps à cause de problèmes
+      que j'ai rencontrés avec mon coéquipier. Le code pour l'entraînement du
+      modèle ainsi qu'une preuve de concept sont disponibles sur le dépot
+      GitHub. Une page DevPost a aussi été créée pour le projet.
     </p>
-    <img class="cv-image first" src="/img/airdraw_screenshot.png" alt="A screenshot of the AirDraw project.">
+    <img class="cv-image first" src="/img/airdraw_screenshot.png" alt="A screenshot of the AirDraw project." />
   </section>
 
   <div class="separator-container">
@@ -194,16 +469,32 @@
       <li>Programmation oritentée objet</li>
     </ul>
     <ul class="cv-summary">
-      <li>A recréé le jeu de Pong en Java avec une simulation de physique pour le mouvement de la balle.</li>
-      <li>Le jeu inclut des options telles la difficulté de l'adversaire, la vitesse de la simulation, et les couleurs de la balle et des raquettes.</li>
+      <li>
+        A recréé le jeu de Pong en Java avec une simulation de physique pour
+        le mouvement de la balle.
+      </li>
+      <li>
+        Le jeu inclut des options telles la difficulté de l'adversaire, la
+        vitesse de la simulation, et les couleurs de la balle et des
+        raquettes.
+      </li>
     </ul>
     <p class="paragraph cv-content with-image">
-      Pour ce projet, j'ai recréé le jeu classique de Pong en Java. Ceci était mon premier peojet en Java et une introduction plus formelle à la programmation orientée objet. Le jeu a donc été développé en premier lieu avec un style fonctionnel/impératif et a été plus tard converti en un style orienté objet. L'orienté objet permettait un maintien du code plus facile, ainsi que des fonctionalités additionelles telles plusieurs simulations de balles avec du multithreading.
+      Pour ce projet, j'ai recréé le jeu classique de Pong en Java. Ceci était
+      mon premier peojet en Java et une introduction plus formelle à la
+      programmation orientée objet. Le jeu a donc été développé en premier
+      lieu avec un style fonctionnel/impératif et a été plus tard converti en
+      un style orienté objet. L'orienté objet permettait un maintien du code
+      plus facile, ainsi que des fonctionnalités additionelles telles
+      plusieurs simulations de balles avec du multithreading.
     </p>
     <p class="paragraph cv-content with-image">
-      Le jeu inclut de nombreuses fonctionnalités : un systeme de pointage avec des joueurs que l'on peut renommer, des options de couleurs pour la balle et les raquettes, des options de jeux et des raccourcis clavier pour des actions comme récommencer, pauser ou quitter la partie.
+      Le jeu inclut de nombreuses fonctionnalités : un systeme de pointage
+      avec des joueurs que l'on peut renommer, des options de couleurs pour la
+      balle et les raquettes, des options de jeux et des raccourcis clavier
+      pour des actions comme récommencer, pauser ou quitter la partie.
     </p>
-    <img class="cv-image first" src="/img/pong_screenshot.png" alt="A screenshot of the Pong project.">
+    <img class="cv-image first" src="/img/pong_screenshot.png" alt="A screenshot of the Pong project." />
   </section>
 
   <div class="separator-container">
@@ -224,13 +515,20 @@
     </ul>
     <ul class="cv-summary">
       <li>A recréé le jeu Snake avec Python et PyGame.</li>
-      <li>Inclut des éléments sonores et plusieurs thèmes de couleurs pour le serpent.</li>
+      <li>
+        Inclut des éléments sonores et plusieurs thèmes de couleurs pour le
+        serpent.
+      </li>
       <li>Fonctionnalité de « high score ».</li>
     </ul>
     <p class="paragraph cv-content with-image">
-      Un de mes plus gros projets en Python a été de recréer le jeu Snake avec PyGame. Le jeu inclut des effets sonores quand le serpent mange un fruit ou quand il entre en collision. Le jeu inclut aussi une fonctionnalité de « high score » et plusieurs vitesses de serpent. Le serpent avait aussi plusieurs thèmes de couleurs.
+      Un de mes plus gros projets en Python a été de recréer le jeu Snake avec
+      PyGame. Le jeu inclut des effets sonores quand le serpent mange un fruit
+      ou quand il entre en collision. Le jeu inclut aussi une fonctionnalité
+      de « high score » et plusieurs vitesses de serpent. Le serpent avait
+      aussi plusieurs thèmes de couleurs.
     </p>
-    <img class="cv-image first" src="/img/snake_screenshot.png" alt="A screenshot of the Snake project.">
+    <img class="cv-image first" src="/img/snake_screenshot.png" alt="A screenshot of the Snake project." />
   </section>
 
   <footer-component></footer-component>
