@@ -1,8 +1,8 @@
-import { email, cvPath, currentLang } from './global.js';
+import { email, cvPath, currentLang } from "./global.js";
 
 /**
  * Define a footer to be used on all pages.
- * 
+ *
  */
 class Footer extends HTMLElement {
   constructor() {
@@ -11,66 +11,70 @@ class Footer extends HTMLElement {
     try {
       email;
     } catch (e) {
-      console.error('Footer email const is not set!');
-      var email = '';
+      console.error("Footer email const is not set!");
+      var email = "";
     }
   }
 
   connectedCallback() {
     var content = {
       website: {
-        en: 'Website Links',
-        fr: 'Liens du site'
+        en: "Website Links",
+        fr: "Liens du site",
       },
       home: {
-        en: 'Home',
-        fr: 'Accueil'
+        en: "Home",
+        fr: "Accueil",
       },
       aboutme: {
-        en: 'About me',
-        fr: 'À propos de moi'
+        en: "About me",
+        fr: "À propos de moi",
       },
       timeline: {
-        en: 'Timeline',
-        fr: 'Chronologie'
+        en: "Timeline",
+        fr: "Chronologie",
       },
       social: {
-        en: 'Social',
-        fr: 'Social'
+        en: "Social",
+        fr: "Social",
       },
       popup: {
-        en: 'Email Copied!',
-        fr: 'Courriel copié!'
+        en: "Email Copied!",
+        fr: "Courriel copié!",
       },
       email: {
-        en: 'Copy my email address!',
-        fr: 'Copier mon adresse courriel!'
+        en: "Copy my email address!",
+        fr: "Copier mon adresse courriel!",
       },
       github: {
-        en: 'Check out my work!',
-        fr: 'Voir mon travail!'
+        en: "Check out my work!",
+        fr: "Voir mon travail!",
+      },
+      itch: {
+        en: "Check out my games!",
+        fr: "Voir mes jeux!",
       },
       linkedin: {
-        en: 'Connect with me!',
-        fr: 'Connecter avec moi!'
+        en: "Connect with me!",
+        fr: "Connecter avec moi!",
       },
       cv: {
-        en: 'Get my resume!',
-        fr: 'Obtenir mon CV!'
+        en: "Get my resume!",
+        fr: "Obtenir mon CV!",
       },
       about: {
-        en: 'About',
-        fr: 'À propos'
+        en: "About",
+        fr: "À propos",
       },
       credits: {
-        en: 'Website designed and built by',
-        fr: 'Site web conçu et construit par'
+        en: "Website designed and built by",
+        fr: "Site web conçu et construit par",
       },
       repo: {
-        en: 'Visit Website Repository',
-        fr: 'Visiter le dépôt du site web'
+        en: "Visit Website Repository",
+        fr: "Visiter le dépôt du site web",
       },
-    }
+    };
 
     this.innerHTML = `
       <link rel="stylesheet" href="/css/footer.css">
@@ -94,6 +98,7 @@ class Footer extends HTMLElement {
           </p>
           <ul>
             <li><a class="sliding-underline" href="https://www.github.com/SpacewaIker" target="_blank" title="${content.github[currentLang]}">Github</a></li>
+            <li><a class="sliding-underline" href="https://spacewaiker.itch.io" target="_blank" title="${content.itch[currentLang]}">Itch.io</a></li>
             <li><a class="sliding-underline" href="https://www.linkedin.com/in/thibaut-baguette" target="_blank" title="${content.linkedin[currentLang]}">LinkedIn</a></li>
             <li><a class="sliding-underline" href="${cvPath}" target="_blank" title="${content.cv[currentLang]}">CV</a></li>
           </ul>
@@ -108,21 +113,21 @@ class Footer extends HTMLElement {
       </footer>
     `;
 
-    $('#copy-email').click(copyEmail);
+    $("#copy-email").click(copyEmail);
   }
 }
 
 function copyEmail() {
-  var el = document.createElement('input');
+  var el = document.createElement("input");
   document.body.appendChild(el);
   el.value = email;
   el.select();
-  document.execCommand('copy', false);
+  document.execCommand("copy", false);
   el.remove();
-  $('#copy-popup').fadeIn(300).delay(500).fadeOut(500);
+  $("#copy-popup").fadeIn(300).delay(500).fadeOut(500);
 }
 
-customElements.define('footer-component', Footer);
+customElements.define("footer-component", Footer);
 
 /*
 
